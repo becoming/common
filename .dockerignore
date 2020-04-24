@@ -1,0 +1,14 @@
+.mvn
+docs
+src
+
+
+
+.travis.yml
+docker-compose.yaml
+LICENSE
+mvnw
+mvnw.cmd
+pom.xml
+README.md
+user-manager.iml

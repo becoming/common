@@ -20,6 +20,7 @@ public class HttpHeader {
 
     /**
      * Authentication
+     * <br/>Response header
      * <br/><br/>
      * Defines the authentication method that should be used to access a resource.
      * <pre>{@code
@@ -30,6 +31,7 @@ public class HttpHeader {
 
     /**
      * Authentication
+     * <br/>Request header
      * <br/><br/>
      * Contains the credentials to authenticate a user-agent with a server.
      * <pre>{@code
@@ -41,6 +43,7 @@ public class HttpHeader {
 
     /**
      * Authentication
+     * <br/>Response header
      * <br/><br/>
      * Defines the authentication method that should be used to access a resource behind a proxy server.
      * <pre>{@code
@@ -51,6 +54,7 @@ public class HttpHeader {
 
     /**
      * Authentication
+     * <br/>Request header
      * <br/><br/>
      * Contains the credentials to authenticate a user agent with a proxy server.
      * <pre>{@code
@@ -61,6 +65,7 @@ public class HttpHeader {
 
     /**
      * Caching
+     * <br/>Response header
      * <br/><br/>
      * The time, in seconds, that the object has been in a proxy cache.
      * <pre>{@code
@@ -71,6 +76,7 @@ public class HttpHeader {
 
     /**
      * Caching
+     * <br/>General header
      * <br/><br/>
      * Directives for caching mechanisms in both requests and responses.
      * <pre>{@code
@@ -87,6 +93,7 @@ public class HttpHeader {
 
     /**
      * Caching
+     * <br/>Response header
      * <br/><br/>
      * Clears browsing data (e.g. cookies, storage, cache) associated with the requesting website.
      * <pre>{@code
@@ -106,6 +113,7 @@ public class HttpHeader {
 
     /**
      * Caching
+     * <br/>Response header
      * <br/><br/>
      * The date/time after which the response is considered stale.
      * <pre>{@code
@@ -116,6 +124,7 @@ public class HttpHeader {
 
     /**
      * Caching
+     * <br/>General header
      * <br/><br/>
      * Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the Cache-Control header is not yet present.
      * <br/>
@@ -129,6 +138,7 @@ public class HttpHeader {
 
     /**
      * Caching
+     * <br/>General header
      * <br/><br/>
      * General warning information about possible problems.
      * <pre>{@code
@@ -141,4 +151,76 @@ public class HttpHeader {
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning#Directives">Directives</a>
      */
     public final String WARNING = "Warning";
+
+    /**
+     * Client hints
+     * <br/>Response header
+     * <br/>HTML5
+     * <br/><br/>
+     * Servers can advertise support for Client Hints using the Accept-CH header field or an equivalent HTML <meta> element with http-equiv attribute
+     * <pre>{@code
+     * Accept-CH: <list of client hints>
+     *
+     * Examples
+     * Accept-CH: DPR, Viewport-Width
+     * Accept-CH: Width
+     * Accept-CH-Lifetime: 86400
+     * Vary: DPR, Viewport-Width, Width
+     * }</pre>
+     */
+    public final String ACCEPT_CH = "Accept-CH";
+
+    /**
+     * Client hints
+     * <br/>Response header
+     * <br/><br/>
+     * Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (RFC6454).
+     * <pre>{@code
+     * Accept-CH-Lifetime: <age>
+     *
+     * Examples
+     * Accept-CH: Viewport-Width, DPR
+     * Accept-CH-Lifetime: 86400
+     * }</pre>
+     */
+    public final String ACCEPT_CH_LIFETIME = "Accept-CH-Lifetime";
+
+    /**
+     * Client hints
+     * <br/>Request header
+     * <br/><br/>
+     * Indicates that the request has been conveyed in early data.
+     * <pre>{@code
+     * Early-Data: 1
+     * }</pre>
+     */
+    public final String EARLY_DATA = "Early-Data";
+
+    /**
+     * Client hints
+     * <br/><br/>
+     * A number that indicates the ratio between physical pixels over CSS pixels of the selected image response.
+     */
+    public final String CONTENT_DPR = "Content-DPR";
+
+    /**
+     * Client hints
+     * <br/>Request header
+     * <br/><br/>
+     * A number that indicates the client’s current Device Pixel Ratio (DPR), which is the ratio of physical pixels over CSS pixels (Section 5.2 of [CSSVAL]) of the layout viewport (Section 9.1.1 of [CSS2]) on the device.
+     * <pre>{@code
+     * DPR: <number>
+     *
+     * Examples
+     * Server first needs to opt in to receive DPR header by sending the response headers Accept-CH containing DPR and Accept-CH-Lifetime.
+     *
+     * Accept-CH: DPR
+     * Accept-CH-Lifetime: 86400
+     *
+     * Then on subsequent requests the client might send DPR header back:
+     *
+     * DPR: 1.0
+     * }</pre>
+     */
+    public final String DPR = "DPR";
 }

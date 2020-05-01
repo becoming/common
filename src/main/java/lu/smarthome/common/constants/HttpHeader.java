@@ -1417,4 +1417,729 @@ public class HttpHeader {
      * }</pre>
      */
     public final String CONTENT_RANGE = "Content-Range";
+
+    /**
+     * Security
+     * <br/><br/>
+     * Allows a server to declare an embedder policy for a given document.
+     */
+    public final String CROSS_ORIGIN_EMBEDDER_POLICY = "Cross-Origin-Embedder-Policy";
+
+    /**
+     * Security
+     * <br/><br/>
+     * Prevents other domains from opening/controlling a window.
+     */
+    public final String CROSS_ORIGIN_OPENER_POLICY = "Cross-Origin-Opener-Policy";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <br/><br/>
+     * Prevents other domains from reading the response of the resources to which this header is applied.
+     * <pre>{@code
+     * Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
+     *
+     * Examples
+     *
+     * The response header below will cause compatible user agents to disallow cross-origin no-cors requests:
+     *
+     * Cross-Origin-Resource-Policy: same-origin
+     * }</pre>
+     *
+     * @see <a href="https://resourcepolicy.fyi/">resourcepolicy.fyi</a>
+     */
+    public final String CROSS_ORIGIN_RESOURCE_POLICY = "Cross-Origin-Resource-Policy";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <br/><br/>
+     * Controls resources the user agent is allowed to load for a given page.
+     * <pre>{@code
+     * Content-Security-Policy: <policy-directive>; <policy-directive>
+     *
+     * Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts, scripts, etc.) over https:
+     *
+     * // header
+     * Content-Security-Policy: default-src https:
+     *
+     * // meta tag
+     * <meta http-equiv="Content-Security-Policy" content="default-src https:">
+     *
+     * Example: Pre-existing site that uses too much inline code to fix but wants to ensure resources are loaded only over https and disable plugins:
+     *
+     * Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Documentation</a>
+     */
+    public final String CONTENT_SECURITY_POLICY = "Content-Security-Policy";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <br/><br/>
+     * Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of JSON documents sent via an HTTP POST request to the specified URI.
+     * <pre>{@code
+     * Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
+     *
+     * Examples
+     *
+     * This header reports violations that would have occurred.
+     * You can use this to iteratively work on your
+     * content security policy. You observe how your site behaves,
+     * watching for violation reports, or malware redirects,
+     * then choose the desired policy enforced by
+     * the Content-Security-Policy header.
+     *
+     * Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+     * }</pre>
+     */
+    public final String CONTENT_SECURITY_POLICY_REPORT_ONLY = "Content-Security-Policy-Report-Only";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <br/><br/>
+     * Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
+     * <pre>{@code
+     * Expect-CT: report-uri="<uri>",
+     *            enforce,
+     *            max-age=<age>
+     *
+     * Examples
+     *
+     * Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">Documentation</a>
+     */
+    public final String EXPECT_CT = "Expect-CT";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <br/><br/>
+     * Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.
+     * <pre>{@code
+     * Feature-Policy: <directive> <allowlist>
+     *
+     * Example
+     *
+     * SecureCorp Inc. wants to disable Microphone and Geolocation APIs
+     * in its application. It can do so by delivering
+     * the following HTTP response header to define a feature policy:
+     *
+     * Feature-Policy: microphone 'none'; geolocation 'none'
+     *
+     * By specifying the 'none' keyword for the origin list,
+     * the specified features will be disabled for all browsing contexts
+     * (this includes all iframes), regardless of their origin.
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy">Documentation</a>
+     */
+    public final String FEATURE_POLICY = "Feature-Policy";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <br/><br/>
+     * Force communication using HTTPS instead of HTTP.
+     * <pre>{@code
+     * Strict-Transport-Security: max-age=<expire-time>
+     * Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
+     * Strict-Transport-Security: max-age=<expire-time>; preload
+     *
+     * Examples
+     *
+     * All present and future subdomains will be HTTPS for a max-age of
+     * 1 year. This blocks access to pages or sub domains that can
+     * only be served over HTTP.
+     *
+     * Strict-Transport-Security: max-age=31536000; includeSubDomains
+     *
+     * In the following example, max-age is set to 2 years, raised from
+     * what was a former limit max-age of 1 year. Note that 1 year is
+     * acceptable for a domain to be included in browsers' HSTS preload
+     * lists. 2 years is, however, the recommended goal as a website's
+     * final HSTS configuration as explained on https://hstspreload.org.
+     * It also suffixed with preload which is necessary for inclusion
+     * in most major web browsers' HSTS preload lists,
+     * e.g. Chromium, Edge, & Firefox.
+     *
+     * Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+     *
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Documentation</a>
+     */
+    public final String STRICT_TRANSPORT_SECURITY = "Strict-Transport-Security";
+
+    /**
+     * Security
+     * <br/>Request header
+     * <br/><br/>
+     * Sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the upgrade-insecure-requests directive.
+     * <pre>{@code
+     * Upgrade-Insecure-Requests: 1
+     *
+     *  Examples
+     *
+     * A client requests  signals to the server that it supports
+     * the upgrade mechanisms of upgrade-insecure-requests:
+     *
+     * GET / HTTP/1.1
+     * Host: example.com
+     * Upgrade-Insecure-Requests: 1
+     *
+     * The server can now redirect to a secure version of the site.
+     * A Vary header can be used so that the site isn't served by
+     * caches to clients that don’t support the upgrade mechanism.
+     *
+     * Location: https://example.com/
+     * Vary: Upgrade-Insecure-Requests
+     * }</pre>
+     */
+    public final String UPGRADE_INSECURE_REQUESTS = "Upgrade-Insecure-Requests";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <br/><br/>
+     * Disables MIME sniffing and forces browser to use the type given in Content-Type.
+     * <pre>{@code
+     * X-Content-Type-Options: nosniff
+     *
+     * }</pre>
+     */
+    public final String X_CONTENT_TYPE_OPTIONS = "X-Content-Type-Options";
+
+    /**
+     * Security
+     * <br/><br/>
+     * The X-Download-Options HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related MS Edge bug).
+     */
+    public final String X_DOWNLOAD_OPTIONS = "X-Download-Options";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <pre>{@code
+     * Indicates whether a browser should be allowed to render
+     * a page in a <frame>, <iframe>, <embed> or <object>.
+     * }</pre>
+     * <pre>{@code
+     * X-Frame-Options: DENY
+     * X-Frame-Options: SAMEORIGIN
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">Documentation</a>
+     */
+    public final String X_FRAME_OPTIONS = "X-Frame-Options";
+
+    /**
+     * Security
+     * <br/><br/>
+     * Specifies if a cross-domain policy file (crossdomain.xml) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player, Adobe Acrobat, Microsoft Silverlight, or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the Same-Origin Policy. See the Cross-domain Policy File Specification for more information.
+     */
+    public final String X_PERMITTED_CROSS_DOMAIN_POLICIES = "X-Permitted-Cross-Domain-Policies";
+
+    /**
+     * Security
+     * <br/><br/>
+     * May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
+     */
+    public final String X_POWERED_BY = "X-Powered-By";
+
+    /**
+     * Security
+     * <br/>Response header
+     * <br/><br/>
+     * Enables cross-site scripting filtering.
+     * <pre>{@code
+     * X-XSS-Protection: 0
+     * X-XSS-Protection: 1
+     * X-XSS-Protection: 1; mode=block
+     * X-XSS-Protection: 1; report=<reporting-uri>
+     *
+     * Example
+     *
+     * Block pages from loading when they detect reflected XSS attacks:
+     *
+     * X-XSS-Protection: 1; mode=block
+     *
+     * PHP
+     *
+     * header("X-XSS-Protection: 1; mode=block");
+     *
+     * Apache (.htaccess)
+     *
+     * <IfModule mod_headers.c>
+     *   Header set X-XSS-Protection "1; mode=block"
+     * </IfModule>
+     *
+     * Nginx
+     *
+     * add_header "X-XSS-Protection" "1; mode=block";
+     *
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">Documentation</a>
+     */
+    public final String X_XSS_PROTECTION = "X-XSS-Protection";
+
+    /**
+     * @deprecated Security
+     * <br/>HTTP Public Key Pinning (HPKP)
+     * <br/><br/>
+     * Associates a specific cryptographic public key with a certain web server to decrease the risk of MITM attacks with forged certificates.
+     * <pre>{@code
+     * Public-Key-Pins: pin-sha256="<pin-value>";
+     *                  max-age=<expire-time>;
+     *                  includeSubDomains;
+     *                  report-uri="<uri>"
+     *
+     * Examples
+     *
+     * Public-Key-Pins:
+     *   pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+     *   pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+     *   max-age=5184000; includeSubDomains;
+     *   report-uri="https://www.example.org/hpkp-report"
+     * }</pre>
+     */
+    @Deprecated
+    public final String PUBLIC_KEY_PINS = "Public-Key-Pins";
+
+    /**
+     * @deprecated Security
+     * <br/>HTTP Public Key Pinning (HPKP)
+     * <br/>Response header
+     * <br/><br/>
+     * Sends reports to the report-uri specified in the header and does still allow clients to connect to the server even if the pinning is violated.
+     * <pre>{@code
+     * Public-Key-Pins-Report-Only: pin-sha256="<pin-value>";
+     *                              max-age=<expire-time>;
+     *                              includeSubDomains;
+     *                              report-uri="<uri>"
+     *
+     * Public-Key-Pins-Report-Only:
+     *   pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+     *   pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+     *   includeSubDomains;
+     *   report-uri="https://www.example.org/hpkp-report"
+     * }</pre>
+     */
+    public final String PUBLIC_KEY_PINS_REPORT_ONLY = "Public-Key-Pins-Report-Only";
+
+    /**
+     * Security
+     * <br/>Fetch metadata request headers
+     * <br/><br/>
+     * It is a request header that indicates the relationship between a request initiator's origin and its target's origin. It is a Structured Header whose value is a token with possible values cross-site, same-origin, same-site, and none.
+     * <pre>{@code
+     * Sec-Fetch-Site: cross-site
+     * Sec-Fetch-Site: same-origin
+     * Sec-Fetch-Site: same-site
+     * Sec-Fetch-Site: none
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site">Documentation</a>
+     */
+    public final String SEC_FETCH_SITE = "Sec-Fetch-Site";
+
+    /**
+     * Security
+     * <br/>Fetch metadata request headers
+     * <br/><br/>
+     * It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values cors, navigate, nested-navigate, no-cors, same-origin, and websocket.
+     * <pre>{@code
+     * Sec-Fetch-Mode: cors
+     * Sec-Fetch-Mode: navigate
+     * Sec-Fetch-Mode: nested-navigate
+     * Sec-Fetch-Mode: no-cors
+     * Sec-Fetch-Mode: same-origin
+     * Sec-Fetch-Mode: websocket
+     * }</pre>
+     */
+    public final String SEC_FETCH_MODE = "Sec-Fetch-Mode";
+
+    /**
+     * Security
+     * <br/>Fetch metadata request headers
+     * <br/><br/>
+     * It is a request header that indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are ?0 for false and ?1 for true.
+     * <pre>{@code
+     * Sec-Fetch-User: ?0
+     * Sec-Fetch-User: ?1
+     * }</pre>
+     */
+    public final String SEC_FETCH_USER = "Sec-Fetch-User";
+
+    /**
+     * Security
+     * <br/>Fetch metadata request headers
+     * <br/><br/>
+     * It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values audio, audioworklet, document, embed, empty, font, image, manifest, object, paintworklet, report, script, serviceworker, sharedworker, style, track, video, worker, xslt, and nested-document.
+     * <pre>{@code
+     * Sec-Fetch-Dest: audio
+     * Sec-Fetch-Dest: audioworklet
+     * Sec-Fetch-Dest: document
+     * Sec-Fetch-Dest: embed
+     * Sec-Fetch-Dest: empty
+     * Sec-Fetch-Dest: font
+     * Sec-Fetch-Dest: image
+     * Sec-Fetch-Dest: manifest
+     * Sec-Fetch-Dest: nested-document
+     * Sec-Fetch-Dest: object
+     * Sec-Fetch-Dest: paintworklet
+     * Sec-Fetch-Dest: report
+     * Sec-Fetch-Dest: script
+     * Sec-Fetch-Dest: serviceworker
+     * Sec-Fetch-Dest: sharedworker
+     * Sec-Fetch-Dest: style
+     * Sec-Fetch-Dest: track
+     * Sec-Fetch-Dest: video
+     * Sec-Fetch-Dest: worker
+     * Sec-Fetch-Dest: xslt
+     * Sec-Fetch-Dest: audioworklet
+     * Sec-Fetch-Dest: audioworklet
+     * }</pre>
+     */
+    public final String SEC_FETCH_DEST = "Sec-Fetch-Dest";
+
+    /**
+     * Server-sent events
+     */
+    public final String LAST_EVENT_ID = "Last-Event-ID";
+
+    /**
+     * Server-sent events
+     * <br/>Response header
+     * <br/><br/>
+     * Defines a mechanism that enables developers to declare a network error reporting policy.
+     * <pre>{@code
+     * NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging">Network Error Logging (NEL) explainer</a>
+     */
+    public final String NEL = "NEL";
+
+    /**
+     * Server-sent events
+     */
+    public final String PING_FROM = "Ping-From";
+
+    /**
+     *
+     */
+    public final String PING_TO = "Ping-To";
+
+    /**
+     * Server-sent events
+     * <br/><br/>
+     * Used to specify a server endpoint for the browser to send warning and error reports to.
+     */
+    public final String REPORT_TO = "Report-To";
+
+    /**
+     * Transfer coding
+     * <br/>Response header
+     * <br/><br/>
+     * Specifies the form of encoding used to safely transfer the entity to the user.
+     * <pre>{@code
+     * Transfer-Encoding: chunked
+     * Transfer-Encoding: compress
+     * Transfer-Encoding: deflate
+     * Transfer-Encoding: gzip
+     * Transfer-Encoding: identity
+     *
+     * // Several values can be listed, separated by a comma
+     * Transfer-Encoding: gzip, chunked
+     *
+     * Examples
+     *
+     * HTTP/1.1 200 OK
+     * Content-Type: text/plain
+     * Transfer-Encoding: chunked
+     *
+     * 7\r\n
+     * Mozilla\r\n
+     * 9\r\n
+     * Developer\r\n
+     * 7\r\n
+     * Network\r\n
+     * 0\r\n
+     * \r\n
+     *
+     * }</pre>
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding">Documentation</a>
+     */
+    public final String TRANSFER_ENCODING = "Transfer-Encoding";
+
+    /**
+     * Transfer Encoding
+     * <br/>Request header
+     * <br/><br/>
+     * Specifies the transfer encodings the user agent is willing to accept.
+     * <pre>{@code
+     *  TE: compress
+     * TE: deflate
+     * TE: gzip
+     * TE: trailers
+     *
+     * // Multiple directives, weighted with the quality value syntax:
+     * TE: trailers, deflate;q=0.5
+     * }</pre>
+     */
+    public final String TE = "TE";
+
+    /**
+     * Transfer Encoding
+     * <br/>Response header
+     * <br/><br/>
+     * Allows the sender to include additional fields at the end of chunked message.
+     * <pre>{@code
+     * Trailer: header-names
+     *
+     * Examples
+     * Chunked transfer encoding using a trailing header
+     *
+     * In this example, the Expires header is used at the
+     * end of the chunked message and serves as a trailing header.
+     *
+     * HTTP/1.1 200 OK
+     * Content-Type: text/plain
+     * Transfer-Encoding: chunked
+     * Trailer: Expires
+     *
+     * 7\r\n
+     * Mozilla\r\n
+     * 9\r\n
+     * Developer\r\n
+     * 7\r\n
+     * Network\r\n
+     * 0\r\n
+     * Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
+     * \r\n
+     * }</pre>
+     *
+     * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Trailer">Documentation</a>
+     */
+    public final String TRAILER = "Trailer";
+
+    /**
+     * WebSockets
+     */
+    public final String SEC_WEBSOCKET_KEY = "Sec-WebSocket-Key";
+
+    /**
+     * WebSockets
+     */
+    public final String SEC_WEBSOCKET_EXTENSIONS = "Sec-WebSocket-Extensions";
+
+    /**
+     * WebSockets
+     */
+    public final String SEC_WEBSOCKET_ACCEPT = "Sec-WebSocket-Accept";
+
+    /**
+     * WebSockets
+     */
+    public final String SEC_WEBSOCKET_PROTOCOL = "Sec-WebSocket-Protocol";
+
+    /**
+     * WebSockets
+     */
+    public final String SEC_WEBSOCKET_VERSION = "Sec-WebSocket-Version";
+
+    /**
+     * Other
+     * A client can express the desired push policy for a request by sending an Accept-Push-Policy header field in the request.
+     */
+    public final String ACCEPT_PUSH_POLICY = "Accept-Push-Policy";
+
+    /**
+     * Other
+     * A client can send the Accept-Signature header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
+     */
+    public final String ACCEPT_SIGNATURE = "Accept-Signature";
+
+    /**
+     * Other
+     * <br/><br/>
+     * Used to list alternate ways to reach this service.
+     * <pre>{@code
+     * Alt-Svc: clear
+     * Alt-Svc: <protocol-id>=<alt-authority>; ma=<max-age>
+     * Alt-Svc: <protocol-id>=<alt-authority>; ma=<max-age>; persist=1
+     *
+     * Example
+     *
+     * Alt-Svc: h2=":443"; ma=2592000;
+     * Alt-Svc: h2=":443"; ma=2592000; persist=1
+     * Alt-Svc: h2="alt.example.com:443", h2=":443"
+     * Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
+     * }</pre>
+     */
+    public final String ALT_SVC = "Alt-Svc";
+
+    /**
+     * Other
+     * <br/><br/>
+     * Contains the date and time at which the message was originated.
+     * <pre>{@code
+     * Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+     *
+     * Examples
+     *
+     * Date: Wed, 21 Oct 2015 07:28:00 GMT
+     * }</pre>
+     */
+    public final String Date = "Date";
+
+    /**
+     * Other
+     * <br/>Response header
+     * <br/><br/>
+     * Tells the browser that the page being loaded is going to want to perform a large allocation.
+     * <pre>{@code
+     * Large-Allocation: 0
+     * Large-Allocation: <megabytes>
+     *
+     * 0 is a special value which represents uncertainty as to what the size of the allocation is.
+     *
+     * <megabytes> The expected size of the allocation to be performed, in megabytes.
+     *
+     * Examples
+     *
+     * Large-Allocation: 0
+     * Large-Allocation: 500
+     * }</pre>
+     *
+     */
+    public final String LARGE_ALLOCATION = "Large-Allocation";
+
+    /**
+     * Other
+     * <br/><br/>
+     * The Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.
+     * <pre>{@code
+     * Link: < uri-reference >; param1=value1; param2="value2"
+     *
+     * Examples
+     *
+     * GOOD Link: <https://example.com>; rel="preconnect"
+     *
+     * WRONG Link: https://bad.example; rel="preconnect"
+     * }</pre>
+     */
+    public final String LINK = "Link";
+
+    /**
+     * Other
+     * <br/><br/>
+     * A Push-Policy defines the server behaviour regarding push when processing a request.
+     */
+    public final String PUSH_POLICY = "Push-Policy";
+
+    /**
+     * Other
+     * <br/><br/>
+     * Indicates how long the user agent should wait before making a follow-up request.
+     */
+    public final String RETRY_AFTER = "Retry-After";
+
+    /**
+     * Other
+     * <br/><br/>
+     * The Signature header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
+     */
+    public final String SIGNATURE = "Signature";
+
+    /**
+     * Other
+     * <br/><br/>
+     * The Signed-Headers header field identifies an ordered list of response header fields to include in a signature.
+     */
+    public final String SIGNED_HEADERS = "Signed-Headers";
+
+    /**
+     * Other
+     * <br/><br/>
+     * Communicates one or more metrics and descriptions for the given request-response cycle.
+     */
+    public final String SERVER_TIMING = "Server-Timing";
+
+    /**
+     * Other
+     * <br/><br/>
+     * Used to remove the path restriction by including this header in the response of the Service Worker script.
+     */
+    public final String SERVICE_WORKER_ALLOWED = "Service-Worker-Allowed";
+
+    /**
+     * Other
+     * <br/>Response header
+     * <br/><br/>
+     * Links generated code to a source map.
+     * <pre>{@code
+     * SourceMap: <url>
+     * X-SourceMap: <url> (deprecated)
+     *
+     * Examples
+     *
+     * SourceMap: /path/to/file.js.map
+     * }</pre>
+     */
+    public final String SOURCEMAP = "SourceMap";
+
+    /**
+     * Other
+     * <br/><br/>
+     * The relevant RFC document for the Upgrade header field is RFC 7230, section 6.7. The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field please see section 6.1 of the aforementioned RFC.
+     */
+    public final String UPGRADE = "Upgrade";
+
+    /**
+     * Other
+     * <br/><br/>
+     * Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
+     */
+    public final String X_DNS_PREFETCH_CONTROL = "X-DNS-Prefetch-Control";
+
+    /**
+     * @deprecated
+     *
+     * Other
+     */
+    @Deprecated
+    public final String X_FIREFOX_SPDY = "X-Firefox-Spdy";
+
+    /**
+     * Other
+     */
+    public final String X_PINGBACK = "X-Pingback";
+
+    /**
+     * Other
+     */
+    public final String X_REQUESTED_WITH = "X-Requested-With";
+
+    /**
+     * Other
+     * <br/><br/>
+     * The X-Robots-Tag HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to <meta name="robots" content="...">.
+     */
+    public final String X_ROBOTS_TAG = "X-Robots-Tag";
+
+    /**
+     * Other
+     * <br/><br/>
+     * Used by Internet Explorer to signal which document mode to use.
+     */
+    public final String X_UA_COMPATIBLE = "X-UA-Compatible";
 }

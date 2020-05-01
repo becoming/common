@@ -27,7 +27,7 @@ public class HttpHeader {
      * WWW-Authenticate: <type> realm=<realm>
      * }</pre>
      */
-    public final static String WWW_AUTHENTICATE = "WWW-Authenticate";
+    public static final String WWW_AUTHENTICATE = "WWW-Authenticate";
 
     /**
      * Authentication
@@ -39,7 +39,7 @@ public class HttpHeader {
      * }</pre>
      * <p>
      */
-    public final static String AUTHORIZATION = "Authorization";
+    public static final String AUTHORIZATION = "Authorization";
 
     /**
      * Authentication
@@ -50,7 +50,7 @@ public class HttpHeader {
      * Proxy-Authenticate: <type> realm=<realm>
      * }</pre>
      */
-    public final static String PROXY_AUTHENTICATE = "Proxy-Authenticate";
+    public static final String PROXY_AUTHENTICATE = "Proxy-Authenticate";
 
     /**
      * Authentication
@@ -61,7 +61,7 @@ public class HttpHeader {
      * Proxy-Authorization: <type> <credentials>
      * }</pre>
      */
-    public final static String PROXY_AUTHORIZATION = "Proxy-Authorization";
+    public static final String PROXY_AUTHORIZATION = "Proxy-Authorization";
 
     /**
      * Caching
@@ -72,7 +72,7 @@ public class HttpHeader {
      * Age: <delta-seconds>
      * }</pre>
      */
-    public final static String AGE = "Age";
+    public static final String AGE = "Age";
 
     /**
      * Caching
@@ -89,7 +89,7 @@ public class HttpHeader {
      * Cache-Control: only-if-cached
      * }</pre>
      */
-    public final static String CACHE_CONTROL = "Cache-Control";
+    public static final String CACHE_CONTROL = "Cache-Control";
 
     /**
      * Caching
@@ -109,7 +109,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#Directives">Directives</a>
      */
-    public final static String CLEAR_SITE_DATA = "Clear-Site-Data";
+    public static final String CLEAR_SITE_DATA = "Clear-Site-Data";
 
     /**
      * Caching
@@ -120,7 +120,7 @@ public class HttpHeader {
      * Expires: <http-date>
      * }</pre>
      */
-    public final static String EXPIRES = "Expires";
+    public static final String EXPIRES = "Expires";
 
     /**
      * Caching
@@ -134,7 +134,7 @@ public class HttpHeader {
      * Pragma: no-cache
      * }</pre>
      */
-    public final static String PRAGMA = "Pragma";
+    public static final String PRAGMA = "Pragma";
 
     /**
      * Caching
@@ -150,7 +150,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning#Directives">Directives</a>
      */
-    public final static String WARNING = "Warning";
+    public static final String WARNING = "Warning";
 
     /**
      * Client hints
@@ -168,7 +168,7 @@ public class HttpHeader {
      * Vary: DPR, Viewport-Width, Width
      * }</pre>
      */
-    public final static String ACCEPT_CH = "Accept-CH";
+    public static final String ACCEPT_CH = "Accept-CH";
 
     /**
      * Client hints
@@ -183,7 +183,7 @@ public class HttpHeader {
      * Accept-CH-Lifetime: 86400
      * }</pre>
      */
-    public final static String ACCEPT_CH_LIFETIME = "Accept-CH-Lifetime";
+    public static final String ACCEPT_CH_LIFETIME = "Accept-CH-Lifetime";
 
     /**
      * Client hints
@@ -194,14 +194,14 @@ public class HttpHeader {
      * Early-Data: 1
      * }</pre>
      */
-    public final static String EARLY_DATA = "Early-Data";
+    public static final String EARLY_DATA = "Early-Data";
 
     /**
      * Client hints
      * <br/><br/>
      * A number that indicates the ratio between physical pixels over CSS pixels of the selected image response.
      */
-    public final static String CONTENT_DPR = "Content-DPR";
+    public static final String CONTENT_DPR = "Content-DPR";
 
     /**
      * Client hints
@@ -222,7 +222,7 @@ public class HttpHeader {
      * DPR: 1.0
      * }</pre>
      */
-    public final static String DPR = "DPR";
+    public static final String DPR = "DPR";
 
     /**
      * Client hints
@@ -244,7 +244,7 @@ public class HttpHeader {
      * Device-Memory: 1
      * }</pre>
      */
-    public final static String DEVICE_MEMORY = "Device-Memory";
+    public static final String DEVICE_MEMORY = "Device-Memory";
 
     /**
      * Client hints
@@ -256,7 +256,7 @@ public class HttpHeader {
      * <sd-token> A numerical value indicating whether the client wants to opt in to reduced data usage mode. "on" indicates yes, while "off" (the default) indicates no.
      * }</pre>
      */
-    public final static String SAVE_DATA = "Save-Data";
+    public static final String SAVE_DATA = "Save-Data";
 
     /**
      * Client hints
@@ -266,7 +266,7 @@ public class HttpHeader {
      * <br/>
      * If Viewport-Width occurs in a message more than once, the last value overrides all previous occurrences.
      */
-    public final static String VIEWPORT_WIDTH = "Viewport-Width";
+    public static final String VIEWPORT_WIDTH = "Viewport-Width";
 
     /**
      * Client hints
@@ -275,7 +275,7 @@ public class HttpHeader {
      * <br/><br/>
      * If the desired resource width is not known at the time of the request or the resource does not have a display width, the Width header field can be omitted. If Width occurs in a message more than once, the last value overrides all previous occurrences
      */
-    public final static String WIDTH = "Width";
+    public static final String WIDTH = "Width";
 
     /**
      * Conditionals
@@ -295,7 +295,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified#Directives">Directives</a>
      */
-    public final static String LAST_MODIFIED = "Last-Modified";
+    public static final String LAST_MODIFIED = "Last-Modified";
 
     /**
      * Conditionals
@@ -313,7 +313,7 @@ public class HttpHeader {
      * }</pre>
      * <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag#Directives">Directives</a>
      */
-    public final static String ETAG = "ETag";
+    public static final String ETAG = "ETag";
 
     /**
      * Conditionals
@@ -339,7 +339,7 @@ public class HttpHeader {
      * If-Match: *
      * }</pre>
      */
-    public final static String IF_MATCH = "If-Match";
+    public static final String IF_MATCH = "If-Match";
 
     /**
      * Conditionals
@@ -358,7 +358,7 @@ public class HttpHeader {
      * If-None-Match: *
      * }</pre>
      */
-    public final static String IF_NONE_MATCH = "If-None-Match";
+    public static final String IF_NONE_MATCH = "If-None-Match";
 
     /**
      * Conditionals
@@ -376,7 +376,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since#Directives">Directives</a>
      */
-    public final static String IF_MODIFIED_SINCE = "If-Modified-Since";
+    public static final String IF_MODIFIED_SINCE = "If-Modified-Since";
 
     /**
      * Conditionals
@@ -393,7 +393,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since#Directives">Directives</a>
      */
-    public final static String IF_UNMODIFIED_SINCE = "If-Unmodified-Since";
+    public static final String IF_UNMODIFIED_SINCE = "If-Unmodified-Since";
 
     /**
      * Conditionals
@@ -419,7 +419,7 @@ public class HttpHeader {
      * Vary: User-Agent
      * }</pre>
      */
-    public final static String VARY = "Vary";
+    public static final String VARY = "Vary";
 
     /**
      * Connection management
@@ -431,7 +431,7 @@ public class HttpHeader {
      * Connection: close
      * }</pre>
      */
-    public final static String CONNECTION = "Connection";
+    public static final String CONNECTION = "Connection";
 
     /**
      * Connection management
@@ -459,7 +459,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Keep-Alive#Directives">Directives</a>
      */
-    public final static String KEEP_ALIVE = "Keep-Alive";
+    public static final String KEEP_ALIVE = "Keep-Alive";
 
     /**
      * Content negotiation
@@ -489,7 +489,7 @@ public class HttpHeader {
      * Accept:text/html,application/xhtml+xml,application/xml;q=0.9,* / *;q=0.8
      * }</pre>
      */
-    public final static String Accept = "Accept";
+    public static final String Accept = "Accept";
 
     /**
      * Content negotiation
@@ -510,7 +510,7 @@ public class HttpHeader {
      *
      * }</pre>
      */
-    public final static String ACCEPT_CHARSET = "Accept-Charset";
+    public static final String ACCEPT_CHARSET = "Accept-Charset";
 
     /**
      * Content negotiation
@@ -535,7 +535,7 @@ public class HttpHeader {
      * Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
      * }</pre>
      */
-    public final static String ACCEPT_ENCODING = "Accept-Encoding";
+    public static final String ACCEPT_ENCODING = "Accept-Encoding";
 
     /**
      * Content negotiation
@@ -556,7 +556,7 @@ public class HttpHeader {
      * Accept-Language: en-US,en;q=0.5
      * }</pre>
      */
-    public final static String ACCEPT_LANGUAGE = "Accept-Language";
+    public static final String ACCEPT_LANGUAGE = "Accept-Language";
 
     /**
      * Controls
@@ -580,7 +580,7 @@ public class HttpHeader {
      * <br/>
      * The server now checks the request headers and may respond with a 100 (Continue) response to instruct the client to go ahead and send the message body, or it will send a 417 (Expectation Failed) status if any of the expectations cannot be met.
      */
-    public final static String EXPECT = "Expect";
+    public static final String EXPECT = "Expect";
 
     /**
      * Cookies
@@ -596,7 +596,7 @@ public class HttpHeader {
      * Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;
      * }</pre>
      */
-    public final static String COOKIE = "Cookie";
+    public static final String COOKIE = "Cookie";
 
     /**
      * Cookies
@@ -637,21 +637,21 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Directives">Directives</a>
      */
-    public final static String SET_COOKIE = "Set-Cookie";
+    public static final String SET_COOKIE = "Set-Cookie";
 
     /**
      * @deprecated Cookies
      * Contains an HTTP cookie previously sent by the server with the Set-Cookie2 header, but has been obsoleted. Use Cookie instead
      */
     @Deprecated
-    public final static String COOKIE_2 = "Cookie2";
+    public static final String COOKIE_2 = "Cookie2";
 
     /**
      * @deprecated Cookies
      * Contains an HTTP cookie previously sent by the server with the Set-Cookie2 header, but has been obsoleted. Use Cookie instead
      */
     @Deprecated
-    public final static String SET_COOKIE_2 = "Set-Cookie2";
+    public static final String SET_COOKIE_2 = "Set-Cookie2";
 
     /**
      * CORS
@@ -671,7 +671,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin#Directives">Directives</a>
      */
-    public final static String ACCESS_CONTROL_ALLOW_ORIGIN = "Access-Control-Allow-Origin";
+    public static final String ACCESS_CONTROL_ALLOW_ORIGIN = "Access-Control-Allow-Origin";
 
     /**
      * CORS
@@ -702,7 +702,7 @@ public class HttpHeader {
      *
      * }</pre>
      */
-    public final static String ACCESS_CONTROL_ALLOW_CREDENTIALS = "Access-Control-Allow-Credentials";
+    public static final String ACCESS_CONTROL_ALLOW_CREDENTIALS = "Access-Control-Allow-Credentials";
 
     /**
      * CORS
@@ -718,7 +718,7 @@ public class HttpHeader {
      * Access-Control-Allow-Headers: X-Custom-Header
      * }</pre>
      */
-    public final static String ACCESS_CONTROL_ALLOW_HEADERS = "Access-Control-Allow-Headers";
+    public static final String ACCESS_CONTROL_ALLOW_HEADERS = "Access-Control-Allow-Headers";
 
     /**
      * CORS
@@ -735,7 +735,7 @@ public class HttpHeader {
      * Access-Control-Allow-Methods: *
      * }</pre>
      */
-    public final static String ACCESS_CONTROL_ALLOW_METHODS = "Access-Control-Allow-Methods";
+    public static final String ACCESS_CONTROL_ALLOW_METHODS = "Access-Control-Allow-Methods";
 
     /**
      * CORS
@@ -771,7 +771,7 @@ public class HttpHeader {
      * Access-Control-Expose-Headers: *, Authorization
      * }</pre>
      */
-    public final static String ACCESS_CONTROL_EXPOSE_HEADERS = "Access-Control-Expose-Headers";
+    public static final String ACCESS_CONTROL_EXPOSE_HEADERS = "Access-Control-Expose-Headers";
 
     /**
      * CORS
@@ -789,7 +789,7 @@ public class HttpHeader {
      *
      * }</pre>
      */
-    public final static String ACCESS_CONTROL_MAX_AGE = "Access-Control-Max-Age";
+    public static final String ACCESS_CONTROL_MAX_AGE = "Access-Control-Max-Age";
 
     /**
      * CORS
@@ -804,7 +804,7 @@ public class HttpHeader {
      * Access-Control-Request-Headers: X-PINGOTHER, Content-Type
      * }</pre>
      */
-    public final static String ACCESS_CONTROL_REQUEST_HEADERS = "Access-Control-Request-Headers";
+    public static final String ACCESS_CONTROL_REQUEST_HEADERS = "Access-Control-Request-Headers";
 
     /**
      * CORS
@@ -819,7 +819,7 @@ public class HttpHeader {
      * Access-Control-Request-Method: POST
      * }</pre>
      */
-    public final static String ACCESS_CONTROL_REQUEST_METHOD = "Access-Control-Request-Method";
+    public static final String ACCESS_CONTROL_REQUEST_METHOD = "Access-Control-Request-Method";
 
     /**
      * CORS
@@ -835,7 +835,7 @@ public class HttpHeader {
      * Origin: https://developer.mozilla.org
      * }</pre>
      */
-    public final static String ORIGIN = "Origin";
+    public static final String ORIGIN = "Origin";
 
     /**
      * CORS
@@ -858,7 +858,7 @@ public class HttpHeader {
      * Timing-Allow-Origin: https://developer.mozilla.org
      * }</pre>
      */
-    public final static String TIMING_ALLOW_ORIGIN = "Timing-Allow-Origin";
+    public static final String TIMING_ALLOW_ORIGIN = "Timing-Allow-Origin";
 
     /**
      * Do Not Track
@@ -879,7 +879,7 @@ public class HttpHeader {
      * navigator.doNotTrack; // "0" or "1"
      * }</pre>
      */
-    public final static String DNT = "DNT";
+    public static final String DNT = "DNT";
 
     /**
      * Do Not Track
@@ -905,7 +905,7 @@ public class HttpHeader {
      * Tk: N
      * }</pre>
      */
-    public final static String TK = "Tk";
+    public static final String TK = "Tk";
 
     /**
      * Downloads
@@ -958,7 +958,7 @@ public class HttpHeader {
      * --boundary--
      * }</pre>
      */
-    public final static String CONTENT_DISPOSITION = "Content-Disposition";
+    public static final String CONTENT_DISPOSITION = "Content-Disposition";
 
     /**
      * Message body information
@@ -971,7 +971,7 @@ public class HttpHeader {
      * <length> The length in decimal number of octets.
      * }</pre>
      */
-    public final static String CONTENT_LENGTH = "Content-Length";
+    public static final String CONTENT_LENGTH = "Content-Length";
 
     /**
      * Message body information
@@ -1000,7 +1000,7 @@ public class HttpHeader {
      * -----------------------------974767299852498929531610575--
      * }</pre>
      */
-    public final static String CONTENT_TYPE = "Content-Type";
+    public static final String CONTENT_TYPE = "Content-Type";
 
     /**
      * Message body information
@@ -1038,7 +1038,7 @@ public class HttpHeader {
      * depends on server settings and used server modules.
      * }</pre>
      */
-    public final static String CONTENT_ENCODING = "Content-Encoding";
+    public static final String CONTENT_ENCODING = "Content-Encoding";
 
     /**
      * Message body information
@@ -1075,7 +1075,7 @@ public class HttpHeader {
      *
      * }</pre>
      */
-    public final static String CONTENT_LANGUAGE = "Content-Language";
+    public static final String CONTENT_LANGUAGE = "Content-Language";
 
     /**
      * Message body information
@@ -1092,7 +1092,7 @@ public class HttpHeader {
      * Accept: text/plain, text/*  -->  Content-Location: /documents/foo.txt
      * }</pre>
      */
-    public final static String CONTENT_LOCATION = "Content-Location";
+    public static final String CONTENT_LOCATION = "Content-Location";
 
     /**
      * Proxies
@@ -1126,7 +1126,7 @@ public class HttpHeader {
      * Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
      * }</pre>
      */
-    public final static String FORWARDED = "Forwarded";
+    public static final String FORWARDED = "Forwarded";
 
     /**
      * Proxies
@@ -1148,7 +1148,7 @@ public class HttpHeader {
      * X-ProxyUser-Ip: 203.0.113.19
      * }</pre>
      */
-    public final static String X_FORWARDED_FOR = "X-Forwarded-For";
+    public static final String X_FORWARDED_FOR = "X-Forwarded-For";
 
     /**
      * Proxies
@@ -1163,7 +1163,7 @@ public class HttpHeader {
      * X-Forwarded-Host: id42.example-cdn.com
      * }</pre>
      */
-    public final static String X_FORWARDED_HOST = "X-Forwarded-Host";
+    public static final String X_FORWARDED_HOST = "X-Forwarded-Host";
 
     /**
      * Proxies
@@ -1187,7 +1187,7 @@ public class HttpHeader {
      * X-Url-Scheme: https
      * }</pre>
      */
-    public final static String X_FORWARDED_PROTO = "X-Forwarded-Proto";
+    public static final String X_FORWARDED_PROTO = "X-Forwarded-Proto";
 
     /**
      * Proxies
@@ -1206,7 +1206,7 @@ public class HttpHeader {
      * Via: 1.0 fred, 1.1 p.example.net
      * }</pre>
      */
-    public final static String VIA = "Via";
+    public static final String VIA = "Via";
 
     /**
      * Redirects
@@ -1221,7 +1221,7 @@ public class HttpHeader {
      * Location: /index.html
      * }</pre>
      */
-    public final static String LOCATION = "Location";
+    public static final String LOCATION = "Location";
 
     /**
      * Request context
@@ -1236,7 +1236,7 @@ public class HttpHeader {
      * From: webmaster@example.org
      * }</pre>
      */
-    public final static String FROM = "From";
+    public static final String FROM = "From";
 
     /**
      * Request context
@@ -1251,7 +1251,7 @@ public class HttpHeader {
      * Host: developer.cdn.mozilla.net
      * }</pre>
      */
-    public final static String HOST = "Host";
+    public static final String HOST = "Host";
 
     /**
      * Request context
@@ -1266,7 +1266,7 @@ public class HttpHeader {
      * Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
      * }</pre>
      */
-    public final static String REFERER = "Referer";
+    public static final String REFERER = "Referer";
 
     /**
      * Request context
@@ -1286,7 +1286,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#Directives">Directives</a>
      */
-    public final static String REFERRER_POLICY = "Referrer-Policy";
+    public static final String REFERRER_POLICY = "Referrer-Policy";
 
     /**
      * Request context
@@ -1308,7 +1308,7 @@ public class HttpHeader {
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">Firefox user agent string reference.</a>
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent#Syntax">Syntax.</a>
      */
-    public final static String USER_AGENT = "User-Agent";
+    public static final String USER_AGENT = "User-Agent";
 
     /**
      * Response context
@@ -1323,7 +1323,7 @@ public class HttpHeader {
      * Allow: GET, POST, HEAD
      * }</pre>
      */
-    public final static String ALLOW = "Allow";
+    public static final String ALLOW = "Allow";
 
     /**
      * Response context
@@ -1338,7 +1338,7 @@ public class HttpHeader {
      * Server: Apache/2.4.1 (Unix)
      * }</pre>
      */
-    public final static String SERVER = "Server";
+    public static final String SERVER = "Server";
 
     /**
      * Range requests
@@ -1354,7 +1354,7 @@ public class HttpHeader {
      * Accept-Ranges: bytes
      * }</pre>
      */
-    public final static String ACCEPT_RANGES = "Accept-Ranges";
+    public static final String ACCEPT_RANGES = "Accept-Ranges";
 
     /**
      * Range requests
@@ -1381,7 +1381,7 @@ public class HttpHeader {
      * Range: bytes=0-499, -500
      * }</pre>
      */
-    public final static String RANGE = "Range";
+    public static final String RANGE = "Range";
 
     /**
      * Range requests
@@ -1399,7 +1399,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range">Docs</a>
      */
-    public final static String IF_RANGE = "If-Range";
+    public static final String IF_RANGE = "If-Range";
 
     /**
      * Range requests
@@ -1416,21 +1416,21 @@ public class HttpHeader {
      * Content-Range: bytes 200-1000/67589
      * }</pre>
      */
-    public final static String CONTENT_RANGE = "Content-Range";
+    public static final String CONTENT_RANGE = "Content-Range";
 
     /**
      * Security
      * <br/><br/>
      * Allows a server to declare an embedder policy for a given document.
      */
-    public final static String CROSS_ORIGIN_EMBEDDER_POLICY = "Cross-Origin-Embedder-Policy";
+    public static final String CROSS_ORIGIN_EMBEDDER_POLICY = "Cross-Origin-Embedder-Policy";
 
     /**
      * Security
      * <br/><br/>
      * Prevents other domains from opening/controlling a window.
      */
-    public final static String CROSS_ORIGIN_OPENER_POLICY = "Cross-Origin-Opener-Policy";
+    public static final String CROSS_ORIGIN_OPENER_POLICY = "Cross-Origin-Opener-Policy";
 
     /**
      * Security
@@ -1449,7 +1449,7 @@ public class HttpHeader {
      *
      * @see <a href="https://resourcepolicy.fyi/">resourcepolicy.fyi</a>
      */
-    public final static String CROSS_ORIGIN_RESOURCE_POLICY = "Cross-Origin-Resource-Policy";
+    public static final String CROSS_ORIGIN_RESOURCE_POLICY = "Cross-Origin-Resource-Policy";
 
     /**
      * Security
@@ -1474,7 +1474,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Documentation</a>
      */
-    public final static String CONTENT_SECURITY_POLICY = "Content-Security-Policy";
+    public static final String CONTENT_SECURITY_POLICY = "Content-Security-Policy";
 
     /**
      * Security
@@ -1496,7 +1496,7 @@ public class HttpHeader {
      * Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
      * }</pre>
      */
-    public final static String CONTENT_SECURITY_POLICY_REPORT_ONLY = "Content-Security-Policy-Report-Only";
+    public static final String CONTENT_SECURITY_POLICY_REPORT_ONLY = "Content-Security-Policy-Report-Only";
 
     /**
      * Security
@@ -1515,7 +1515,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">Documentation</a>
      */
-    public final static String EXPECT_CT = "Expect-CT";
+    public static final String EXPECT_CT = "Expect-CT";
 
     /**
      * Security
@@ -1540,7 +1540,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy">Documentation</a>
      */
-    public final static String FEATURE_POLICY = "Feature-Policy";
+    public static final String FEATURE_POLICY = "Feature-Policy";
 
     /**
      * Security
@@ -1575,7 +1575,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Documentation</a>
      */
-    public final static String STRICT_TRANSPORT_SECURITY = "Strict-Transport-Security";
+    public static final String STRICT_TRANSPORT_SECURITY = "Strict-Transport-Security";
 
     /**
      * Security
@@ -1602,7 +1602,7 @@ public class HttpHeader {
      * Vary: Upgrade-Insecure-Requests
      * }</pre>
      */
-    public final static String UPGRADE_INSECURE_REQUESTS = "Upgrade-Insecure-Requests";
+    public static final String UPGRADE_INSECURE_REQUESTS = "Upgrade-Insecure-Requests";
 
     /**
      * Security
@@ -1614,14 +1614,14 @@ public class HttpHeader {
      *
      * }</pre>
      */
-    public final static String X_CONTENT_TYPE_OPTIONS = "X-Content-Type-Options";
+    public static final String X_CONTENT_TYPE_OPTIONS = "X-Content-Type-Options";
 
     /**
      * Security
      * <br/><br/>
      * The X-Download-Options HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related MS Edge bug).
      */
-    public final static String X_DOWNLOAD_OPTIONS = "X-Download-Options";
+    public static final String X_DOWNLOAD_OPTIONS = "X-Download-Options";
 
     /**
      * Security
@@ -1637,21 +1637,21 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">Documentation</a>
      */
-    public final static String X_FRAME_OPTIONS = "X-Frame-Options";
+    public static final String X_FRAME_OPTIONS = "X-Frame-Options";
 
     /**
      * Security
      * <br/><br/>
      * Specifies if a cross-domain policy file (crossdomain.xml) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player, Adobe Acrobat, Microsoft Silverlight, or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the Same-Origin Policy. See the Cross-domain Policy File Specification for more information.
      */
-    public final static String X_PERMITTED_CROSS_DOMAIN_POLICIES = "X-Permitted-Cross-Domain-Policies";
+    public static final String X_PERMITTED_CROSS_DOMAIN_POLICIES = "X-Permitted-Cross-Domain-Policies";
 
     /**
      * Security
      * <br/><br/>
      * May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
      */
-    public final static String X_POWERED_BY = "X-Powered-By";
+    public static final String X_POWERED_BY = "X-Powered-By";
 
     /**
      * Security
@@ -1688,7 +1688,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">Documentation</a>
      */
-    public final static String X_XSS_PROTECTION = "X-XSS-Protection";
+    public static final String X_XSS_PROTECTION = "X-XSS-Protection";
 
     /**
      * @deprecated Security
@@ -1711,7 +1711,7 @@ public class HttpHeader {
      * }</pre>
      */
     @Deprecated
-    public final static String PUBLIC_KEY_PINS = "Public-Key-Pins";
+    public static final String PUBLIC_KEY_PINS = "Public-Key-Pins";
 
     /**
      * @deprecated Security
@@ -1733,7 +1733,7 @@ public class HttpHeader {
      * }</pre>
      */
     @Deprecated
-    public final static String PUBLIC_KEY_PINS_REPORT_ONLY = "Public-Key-Pins-Report-Only";
+    public static final String PUBLIC_KEY_PINS_REPORT_ONLY = "Public-Key-Pins-Report-Only";
 
     /**
      * Security
@@ -1749,7 +1749,7 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site">Documentation</a>
      */
-    public final static String SEC_FETCH_SITE = "Sec-Fetch-Site";
+    public static final String SEC_FETCH_SITE = "Sec-Fetch-Site";
 
     /**
      * Security
@@ -1765,7 +1765,7 @@ public class HttpHeader {
      * Sec-Fetch-Mode: websocket
      * }</pre>
      */
-    public final static String SEC_FETCH_MODE = "Sec-Fetch-Mode";
+    public static final String SEC_FETCH_MODE = "Sec-Fetch-Mode";
 
     /**
      * Security
@@ -1777,7 +1777,7 @@ public class HttpHeader {
      * Sec-Fetch-User: ?1
      * }</pre>
      */
-    public final static String SEC_FETCH_USER = "Sec-Fetch-User";
+    public static final String SEC_FETCH_USER = "Sec-Fetch-User";
 
     /**
      * Security
@@ -1809,12 +1809,12 @@ public class HttpHeader {
      * Sec-Fetch-Dest: audioworklet
      * }</pre>
      */
-    public final static String SEC_FETCH_DEST = "Sec-Fetch-Dest";
+    public static final String SEC_FETCH_DEST = "Sec-Fetch-Dest";
 
     /**
      * Server-sent events
      */
-    public final static String LAST_EVENT_ID = "Last-Event-ID";
+    public static final String LAST_EVENT_ID = "Last-Event-ID";
 
     /**
      * Server-sent events
@@ -1827,24 +1827,24 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging">Network Error Logging (NEL) explainer</a>
      */
-    public final static String NEL = "NEL";
+    public static final String NEL = "NEL";
 
     /**
      * Server-sent events
      */
-    public final static String PING_FROM = "Ping-From";
+    public static final String PING_FROM = "Ping-From";
 
     /**
      *
      */
-    public final static String PING_TO = "Ping-To";
+    public static final String PING_TO = "Ping-To";
 
     /**
      * Server-sent events
      * <br/><br/>
      * Used to specify a server endpoint for the browser to send warning and error reports to.
      */
-    public final static String REPORT_TO = "Report-To";
+    public static final String REPORT_TO = "Report-To";
 
     /**
      * Transfer coding
@@ -1879,7 +1879,7 @@ public class HttpHeader {
      * }</pre>
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding">Documentation</a>
      */
-    public final static String TRANSFER_ENCODING = "Transfer-Encoding";
+    public static final String TRANSFER_ENCODING = "Transfer-Encoding";
 
     /**
      * Transfer Encoding
@@ -1896,7 +1896,7 @@ public class HttpHeader {
      * TE: trailers, deflate;q=0.5
      * }</pre>
      */
-    public final static String TE = "TE";
+    public static final String TE = "TE";
 
     /**
      * Transfer Encoding
@@ -1930,44 +1930,44 @@ public class HttpHeader {
      *
      * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Trailer">Documentation</a>
      */
-    public final static String TRAILER = "Trailer";
+    public static final String TRAILER = "Trailer";
 
     /**
      * WebSockets
      */
-    public final static String SEC_WEBSOCKET_KEY = "Sec-WebSocket-Key";
+    public static final String SEC_WEBSOCKET_KEY = "Sec-WebSocket-Key";
 
     /**
      * WebSockets
      */
-    public final static String SEC_WEBSOCKET_EXTENSIONS = "Sec-WebSocket-Extensions";
+    public static final String SEC_WEBSOCKET_EXTENSIONS = "Sec-WebSocket-Extensions";
 
     /**
      * WebSockets
      */
-    public final static String SEC_WEBSOCKET_ACCEPT = "Sec-WebSocket-Accept";
+    public static final String SEC_WEBSOCKET_ACCEPT = "Sec-WebSocket-Accept";
 
     /**
      * WebSockets
      */
-    public final static String SEC_WEBSOCKET_PROTOCOL = "Sec-WebSocket-Protocol";
+    public static final String SEC_WEBSOCKET_PROTOCOL = "Sec-WebSocket-Protocol";
 
     /**
      * WebSockets
      */
-    public final static String SEC_WEBSOCKET_VERSION = "Sec-WebSocket-Version";
+    public static final String SEC_WEBSOCKET_VERSION = "Sec-WebSocket-Version";
 
     /**
      * Other
      * A client can express the desired push policy for a request by sending an Accept-Push-Policy header field in the request.
      */
-    public final static String ACCEPT_PUSH_POLICY = "Accept-Push-Policy";
+    public static final String ACCEPT_PUSH_POLICY = "Accept-Push-Policy";
 
     /**
      * Other
      * A client can send the Accept-Signature header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
      */
-    public final static String ACCEPT_SIGNATURE = "Accept-Signature";
+    public static final String ACCEPT_SIGNATURE = "Accept-Signature";
 
     /**
      * Other
@@ -1986,7 +1986,7 @@ public class HttpHeader {
      * Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
      * }</pre>
      */
-    public final static String ALT_SVC = "Alt-Svc";
+    public static final String ALT_SVC = "Alt-Svc";
 
     /**
      * Other
@@ -2000,7 +2000,7 @@ public class HttpHeader {
      * Date: Wed, 21 Oct 2015 07:28:00 GMT
      * }</pre>
      */
-    public final static String Date = "Date";
+    public static final String Date = "Date";
 
     /**
      * Other
@@ -2022,7 +2022,7 @@ public class HttpHeader {
      * }</pre>
      *
      */
-    public final static String LARGE_ALLOCATION = "Large-Allocation";
+    public static final String LARGE_ALLOCATION = "Large-Allocation";
 
     /**
      * Other
@@ -2038,49 +2038,49 @@ public class HttpHeader {
      * WRONG Link: https://bad.example; rel="preconnect"
      * }</pre>
      */
-    public final static String LINK = "Link";
+    public static final String LINK = "Link";
 
     /**
      * Other
      * <br/><br/>
      * A Push-Policy defines the server behaviour regarding push when processing a request.
      */
-    public final static String PUSH_POLICY = "Push-Policy";
+    public static final String PUSH_POLICY = "Push-Policy";
 
     /**
      * Other
      * <br/><br/>
      * Indicates how long the user agent should wait before making a follow-up request.
      */
-    public final static String RETRY_AFTER = "Retry-After";
+    public static final String RETRY_AFTER = "Retry-After";
 
     /**
      * Other
      * <br/><br/>
      * The Signature header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
      */
-    public final static String SIGNATURE = "Signature";
+    public static final String SIGNATURE = "Signature";
 
     /**
      * Other
      * <br/><br/>
      * The Signed-Headers header field identifies an ordered list of response header fields to include in a signature.
      */
-    public final static String SIGNED_HEADERS = "Signed-Headers";
+    public static final String SIGNED_HEADERS = "Signed-Headers";
 
     /**
      * Other
      * <br/><br/>
      * Communicates one or more metrics and descriptions for the given request-response cycle.
      */
-    public final static String SERVER_TIMING = "Server-Timing";
+    public static final String SERVER_TIMING = "Server-Timing";
 
     /**
      * Other
      * <br/><br/>
      * Used to remove the path restriction by including this header in the response of the Service Worker script.
      */
-    public final static String SERVICE_WORKER_ALLOWED = "Service-Worker-Allowed";
+    public static final String SERVICE_WORKER_ALLOWED = "Service-Worker-Allowed";
 
     /**
      * Other
@@ -2096,21 +2096,21 @@ public class HttpHeader {
      * SourceMap: /path/to/file.js.map
      * }</pre>
      */
-    public final static String SOURCEMAP = "SourceMap";
+    public static final String SOURCEMAP = "SourceMap";
 
     /**
      * Other
      * <br/><br/>
      * The relevant RFC document for the Upgrade header field is RFC 7230, section 6.7. The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field please see section 6.1 of the aforementioned RFC.
      */
-    public final static String UPGRADE = "Upgrade";
+    public static final String UPGRADE = "Upgrade";
 
     /**
      * Other
      * <br/><br/>
      * Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
      */
-    public final static String X_DNS_PREFETCH_CONTROL = "X-DNS-Prefetch-Control";
+    public static final String X_DNS_PREFETCH_CONTROL = "X-DNS-Prefetch-Control";
 
     /**
      * @deprecated
@@ -2118,29 +2118,29 @@ public class HttpHeader {
      * Other
      */
     @Deprecated
-    public final static String X_FIREFOX_SPDY = "X-Firefox-Spdy";
+    public static final String X_FIREFOX_SPDY = "X-Firefox-Spdy";
 
     /**
      * Other
      */
-    public final static String X_PINGBACK = "X-Pingback";
+    public static final String X_PINGBACK = "X-Pingback";
 
     /**
      * Other
      */
-    public final static String X_REQUESTED_WITH = "X-Requested-With";
+    public static final String X_REQUESTED_WITH = "X-Requested-With";
 
     /**
      * Other
      * <br/><br/>
      * The X-Robots-Tag HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to <meta name="robots" content="...">.
      */
-    public final static String X_ROBOTS_TAG = "X-Robots-Tag";
+    public static final String X_ROBOTS_TAG = "X-Robots-Tag";
 
     /**
      * Other
      * <br/><br/>
      * Used by Internet Explorer to signal which document mode to use.
      */
-    public final static String X_UA_COMPATIBLE = "X-UA-Compatible";
+    public static final String X_UA_COMPATIBLE = "X-UA-Compatible";
 }

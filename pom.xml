@@ -9,20 +9,12 @@
 	<name>common</name>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.projectKey>smart-home-oss_common</sonar.projectKey>
 		<sonar.organization>smart-home-oss</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<lombok.version>1.18.12</lombok.version>
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-			<version>${lombok.version}</version>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<plugins>

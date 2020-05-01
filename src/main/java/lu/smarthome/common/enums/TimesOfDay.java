@@ -1,0 +1,8 @@
+package lu.smarthome.common.enums;
+
+public enum TimesOfDay {
+    EARLY_MORNING, MORNING,
+    MID_DAY, LUNCH_TIME, AFTER_LUNCH, AFTER_NOON,
+    EVENING, LATE_EVENING, NIGHT, MIDNIGHT,
+    BEFORE_DAWN, AFTER_DAWN, BEFORE_SUNSET, AFTER_SUNSET
+}

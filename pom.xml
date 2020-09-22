@@ -17,6 +17,21 @@
 		<lombok.version>1.18.12</lombok.version>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>bintray-smart-home-oss-maven</id>
+			<name>smart-home-oss-maven</name>
+			<url>https://api.bintray.com/maven/smart-home-oss/maven/common/;publish=1</url>
+		</repository>
+	</distributionManagement>
+
+	<scm>
+		<connection>scm:git:https://github.com/smart-home-oss/common.git</connection>
+		<url>hhttps://github.com/smart-home-oss/common</url>
+		<developerConnection>scm:git:https://github.com/smart-home-oss/common.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -24,7 +39,6 @@
 			<version>${lombok.version}</version>
 			<optional>true</optional>
 		</dependency>
-
 	</dependencies>
 
 	<build>

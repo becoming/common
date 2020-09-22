@@ -13,8 +13,8 @@
 		<sonar.projectKey>smart-home-oss_common</sonar.projectKey>
 		<sonar.organization>smart-home-oss</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
 		<lombok.version>1.18.12</lombok.version>
-		<junit.version>5.5.2</junit.version>
 	</properties>
 
 	<dependencies>
@@ -25,21 +25,6 @@
 			<optional>true</optional>
 		</dependency>
 
-<!--		 TEST -->
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-<!--		-->
-<!--		<dependency>-->
-<!--			<groupId>org.junit.jupiter</groupId>-->
-<!--			<artifactId>junit-jupiter-api</artifactId>-->
-<!--			<version>5.5.2</version>-->
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
 	</dependencies>
 
 	<build>

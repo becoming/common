@@ -9,6 +9,8 @@
 	<name>common</name>
 
 	<properties>
+		<project.scm.id>github</project.scm.id>
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.projectKey>smart-home-oss_common</sonar.projectKey>
 		<sonar.organization>smart-home-oss</sonar.organization>

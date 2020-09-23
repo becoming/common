@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/smart-home-oss/common.svg?branch=master)](https://travis-ci.com/smart-home-oss/common)
-
+[ ![Download](https://api.bintray.com/packages/smart-home-oss/maven/common/images/download.svg) ](https://bintray.com/smart-home-oss/maven/common/_latestVersion)
 # common
 Contains a list of commonly used constants all over the place.
 
@@ -51,5 +51,3 @@ And the dependenccy itself
     	<version>0.0.8</version>
     	<type>pom</type>
     </dependency>
-    
-> Please mind that version might change!

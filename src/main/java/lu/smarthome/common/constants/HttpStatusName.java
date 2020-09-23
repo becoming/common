@@ -44,12 +44,12 @@ public class HttpStatusName {
      * Successful responses (200–299)
      * <br><br>
      * The request has succeeded. The meaning of the success depends on the HTTP method:
-     * <p>
+     * <br>
      * <strong>GET</strong>: The resource has been fetched and is transmitted in the message body.
      * <br><strong>HEAD</strong>: The entity headers are in the message body.
      * <br><strong>PUT or POST</strong>: The resource describing the result of the action is transmitted in the message body.
      * <br><strong>TRACE</strong>: The message body contains the request message as received by the server
-     * <p>
+     * <br>
      */
     public final static String OK = "Ok";
 

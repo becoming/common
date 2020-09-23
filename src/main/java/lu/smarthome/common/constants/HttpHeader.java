@@ -2,12 +2,12 @@ package lu.smarthome.common.constants;
 
 /**
  * Headers can be grouped according to their contexts:
- * <p>
+ * <br>
  * <br><strong>General headers</strong> apply to both requests and responses, but with no relation to the data transmitted in the body.
  * <br><strong>Request headers</strong> contain more information about the resource to be fetched, or about the client requesting the resource.
  * <br><strong>Response headers</strong> hold additional information about the response, like its location or about the server providing it.
  * <br><strong>Entity headers</strong> contain information about the body of the resource, like its content length or MIME type.
- * <p>
+ * <br>
  * Other groupings are available.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers</a>
@@ -37,7 +37,7 @@ public class HttpHeader {
      * <pre>{@code
      *  Authorization: <type> <credentials>
      * }</pre>
-     * <p>
+     * <br>
      */
     public static final String AUTHORIZATION = "Authorization";
 
@@ -566,12 +566,12 @@ public class HttpHeader {
      * <pre>{@code
      * Expect: 100-continue
      * }</pre>
-     * <p>
+     * <br>
      * Examples<br>
      * Large message body
      * <br>
      * A client sends a request with a Expect header and waits for the server to respond before sending the message body.
-     * <p>
+     * <br>
      * PUT /somewhere/fun HTTP/1.1<br>
      * Host: origin.example.com<br>
      * Content-Type: video/h264<br>

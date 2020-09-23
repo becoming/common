@@ -9,6 +9,7 @@
 
 	<properties>
 		<project.scm.id>github</project.scm.id>
+		<java.version>11</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.projectKey>smart-home-oss_common</sonar.projectKey>
 		<sonar.organization>smart-home-oss</sonar.organization>
@@ -49,6 +50,8 @@
 				<version>3.8.1</version>
 				<configuration>
 					<release>11</release>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 		</plugins>

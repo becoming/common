@@ -107,7 +107,7 @@ public class HttpStatusCode {
      * Successful responses (200–299)
      * <br>WebDAV
      * <br><br>
-     * Used inside a <dav:propstat> response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.
+     * Used inside a &lt;dav:propstat&gt; response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.
      */
     public final static int ALREADY_REPORTED_208 = 208;
 

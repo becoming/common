@@ -3,10 +3,10 @@ package lu.smarthome.common.constants;
 /**
  * Headers can be grouped according to their contexts:
  * <p>
- * <br/><strong>General headers</strong> apply to both requests and responses, but with no relation to the data transmitted in the body.
- * <br/><strong>Request headers</strong> contain more information about the resource to be fetched, or about the client requesting the resource.
- * <br/><strong>Response headers</strong> hold additional information about the response, like its location or about the server providing it.
- * <br/><strong>Entity headers</strong> contain information about the body of the resource, like its content length or MIME type.
+ * <br><strong>General headers</strong> apply to both requests and responses, but with no relation to the data transmitted in the body.
+ * <br><strong>Request headers</strong> contain more information about the resource to be fetched, or about the client requesting the resource.
+ * <br><strong>Response headers</strong> hold additional information about the response, like its location or about the server providing it.
+ * <br><strong>Entity headers</strong> contain information about the body of the resource, like its content length or MIME type.
  * <p>
  * Other groupings are available.
  *
@@ -20,8 +20,8 @@ public class HttpHeader {
 
     /**
      * Authentication
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Defines the authentication method that should be used to access a resource.
      * <pre>{@code
      * WWW-Authenticate: <type> realm=<realm>
@@ -31,8 +31,8 @@ public class HttpHeader {
 
     /**
      * Authentication
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Contains the credentials to authenticate a user-agent with a server.
      * <pre>{@code
      *  Authorization: <type> <credentials>
@@ -43,8 +43,8 @@ public class HttpHeader {
 
     /**
      * Authentication
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Defines the authentication method that should be used to access a resource behind a proxy server.
      * <pre>{@code
      * Proxy-Authenticate: <type> realm=<realm>
@@ -54,8 +54,8 @@ public class HttpHeader {
 
     /**
      * Authentication
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Contains the credentials to authenticate a user agent with a proxy server.
      * <pre>{@code
      * Proxy-Authorization: <type> <credentials>
@@ -65,8 +65,8 @@ public class HttpHeader {
 
     /**
      * Caching
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * The time, in seconds, that the object has been in a proxy cache.
      * <pre>{@code
      * Age: <delta-seconds>
@@ -76,8 +76,8 @@ public class HttpHeader {
 
     /**
      * Caching
-     * <br/>General header
-     * <br/><br/>
+     * <br>General header
+     * <br><br>
      * Directives for caching mechanisms in both requests and responses.
      * <pre>{@code
      * Cache-Control: max-age=<seconds>
@@ -93,8 +93,8 @@ public class HttpHeader {
 
     /**
      * Caching
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Clears browsing data (e.g. cookies, storage, cache) associated with the requesting website.
      * <pre>{@code
      * // Single directive
@@ -113,8 +113,8 @@ public class HttpHeader {
 
     /**
      * Caching
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * The date/time after which the response is considered stale.
      * <pre>{@code
      * Expires: <http-date>
@@ -124,11 +124,11 @@ public class HttpHeader {
 
     /**
      * Caching
-     * <br/>General header
-     * <br/><br/>
+     * <br>General header
+     * <br><br>
      * Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the Cache-Control header is not yet present.
-     * <br/>
-     * <br/>
+     * <br>
+     * <br>
      * <strong>Note</strong>: Pragma is not specified for HTTP responses and is therefore not a reliable replacement for the general HTTP/1.1 Cache-Control header, although it does behave the same as Cache-Control: no-cache, if the Cache-Control header field is omitted in a request. Use Pragma only for backwards compatibility with HTTP/1.0 clients.
      * <pre>{@code
      * Pragma: no-cache
@@ -138,8 +138,8 @@ public class HttpHeader {
 
     /**
      * Caching
-     * <br/>General header
-     * <br/><br/>
+     * <br>General header
+     * <br><br>
      * General warning information about possible problems.
      * <pre>{@code
      * Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
@@ -154,9 +154,9 @@ public class HttpHeader {
 
     /**
      * Client hints
-     * <br/>Response header
-     * <br/>HTML5
-     * <br/><br/>
+     * <br>Response header
+     * <br>HTML5
+     * <br><br>
      * Servers can advertise support for Client Hints using the Accept-CH header field or an equivalent HTML <meta> element with http-equiv attribute
      * <pre>{@code
      * Accept-CH: <list of client hints>
@@ -172,8 +172,8 @@ public class HttpHeader {
 
     /**
      * Client hints
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (RFC6454).
      * <pre>{@code
      * Accept-CH-Lifetime: <age>
@@ -187,8 +187,8 @@ public class HttpHeader {
 
     /**
      * Client hints
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Indicates that the request has been conveyed in early data.
      * <pre>{@code
      * Early-Data: 1
@@ -198,15 +198,15 @@ public class HttpHeader {
 
     /**
      * Client hints
-     * <br/><br/>
+     * <br><br>
      * A number that indicates the ratio between physical pixels over CSS pixels of the selected image response.
      */
     public static final String CONTENT_DPR = "Content-DPR";
 
     /**
      * Client hints
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * A number that indicates the client’s current Device Pixel Ratio (DPR), which is the ratio of physical pixels over CSS pixels (Section 5.2 of [CSSVAL]) of the layout viewport (Section 9.1.1 of [CSS2]) on the device.
      * <pre>{@code
      * DPR: <number>
@@ -226,8 +226,8 @@ public class HttpHeader {
 
     /**
      * Client hints
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Technically a part of Device Memory API, this header represents an approximate amount of RAM client has.
      * <pre>{@code
      * Device-Memory: <number>
@@ -248,7 +248,7 @@ public class HttpHeader {
 
     /**
      * Client hints
-     * <br/><br/>
+     * <br><br>
      * A boolean that indicates the user agent's preference for reduced data usage.
      * <pre>{@code
      * Save-Data: <sd-token>
@@ -260,27 +260,27 @@ public class HttpHeader {
 
     /**
      * Client hints
-     * <br/><br/>
+     * <br><br>
      * A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
-     * <br/>
-     * <br/>
+     * <br>
+     * <br>
      * If Viewport-Width occurs in a message more than once, the last value overrides all previous occurrences.
      */
     public static final String VIEWPORT_WIDTH = "Viewport-Width";
 
     /**
      * Client hints
-     * <br/><br/>
+     * <br><br>
      * The Width request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
-     * <br/><br/>
+     * <br><br>
      * If the desired resource width is not known at the time of the request or the resource does not have a display width, the Width header field can be omitted. If Width occurs in a message more than once, the last value overrides all previous occurrences
      */
     public static final String WIDTH = "Width";
 
     /**
      * Conditionals
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * The last modification date of the resource, used to compare several versions of the same resource. It is less accurate than ETag, but easier to calculate in some environments. Conditional requests using If-Modified-Since and If-Unmodified-Since use this value to change the behavior of the request.
      * <pre>{@code
      * Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
@@ -299,8 +299,8 @@ public class HttpHeader {
 
     /**
      * Conditionals
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * A unique string identifying the version of the resource. Conditional requests using If-Match and If-None-Match use this value to change the behavior of the request.
      * <pre>{@code
      * ETag: W/"<etag_value>"
@@ -317,8 +317,8 @@ public class HttpHeader {
 
     /**
      * Conditionals
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Makes the request conditional, and applies the method only if the stored resource matches one of the given ETags.
      * <pre>{@code
      * If-Match: <etag_value>
@@ -343,8 +343,8 @@ public class HttpHeader {
 
     /**
      * Conditionals
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Makes the request conditional, and applies the method only if the stored resource doesn't match any of the given ETags. This is used to update caches (for safe requests), or to prevent to upload a new resource when one already exists.
      * <pre>{@code
      * If-None-Match: "<etag_value>"
@@ -362,8 +362,8 @@ public class HttpHeader {
 
     /**
      * Conditionals
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Makes the request conditional, and expects the entity to be transmitted only if it has been modified after the given date. This is used to transmit data only when the cache is out of date.
      * <pre>{@code
      * If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
@@ -380,8 +380,8 @@ public class HttpHeader {
 
     /**
      * Conditionals
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Makes the request conditional, and expects the entity to be transmitted only if it has not been modified after the given date. This ensures the coherence of a new fragment of a specific range with previous ones, or to implement an optimistic concurrency control system when modifying existing documents.
      * <pre>{@code
      * If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
@@ -397,8 +397,8 @@ public class HttpHeader {
 
     /**
      * Conditionals
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Determines how to match request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server.
      * <pre>{@code
      * Vary: *
@@ -423,8 +423,8 @@ public class HttpHeader {
 
     /**
      * Connection management
-     * <br/>General header
-     * <br/><br/>
+     * <br>General header
+     * <br><br>
      * Controls whether the network connection stays open after the current transaction finishes.
      * <pre>{@code
      * Connection: keep-alive
@@ -435,8 +435,8 @@ public class HttpHeader {
 
     /**
      * Connection management
-     * <br/>General header
-     * <br/><br/>
+     * <br>General header
+     * <br><br>
      * Controls how long a persistent connection should stay open.
      * <pre>{@code
      * Keep-Alive: parameters
@@ -463,8 +463,8 @@ public class HttpHeader {
 
     /**
      * Content negotiation
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Informs the server about the types of data that can be sent back.
      * <pre>{@code
      * Accept: <MIME_type>/<MIME_subtype>
@@ -493,8 +493,8 @@ public class HttpHeader {
 
     /**
      * Content negotiation
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Which character encodings the client understands.
      * <pre>{@code
      * Accept-Charset: <charset>
@@ -514,8 +514,8 @@ public class HttpHeader {
 
     /**
      * Content negotiation
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * The encoding algorithm, usually a compression algorithm, that can be used on the resource sent back.
      * <pre>{@code
      * Accept-Encoding: gzip
@@ -539,8 +539,8 @@ public class HttpHeader {
 
     /**
      * Content negotiation
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Informs the server about the human language the server is expected to send back. This is a hint and is not necessarily under the full control of the user: the server should always pay attention not to override an explicit user choice (like selecting a language from a dropdown).
      * <pre>{@code
      * Accept-Language: <language>
@@ -560,31 +560,31 @@ public class HttpHeader {
 
     /**
      * Controls
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Indicates expectations that need to be fulfilled by the server to properly handle the request.
      * <pre>{@code
      * Expect: 100-continue
      * }</pre>
      * <p>
-     * Examples<br/>
+     * Examples<br>
      * Large message body
-     * <br/>
+     * <br>
      * A client sends a request with a Expect header and waits for the server to respond before sending the message body.
      * <p>
-     * PUT /somewhere/fun HTTP/1.1<br/>
-     * Host: origin.example.com<br/>
-     * Content-Type: video/h264<br/>
-     * Content-Length: 1234567890987<br/>
-     * Expect: 100-continue<br/>
-     * <br/>
+     * PUT /somewhere/fun HTTP/1.1<br>
+     * Host: origin.example.com<br>
+     * Content-Type: video/h264<br>
+     * Content-Length: 1234567890987<br>
+     * Expect: 100-continue<br>
+     * <br>
      * The server now checks the request headers and may respond with a 100 (Continue) response to instruct the client to go ahead and send the message body, or it will send a 417 (Expectation Failed) status if any of the expectations cannot be met.
      */
     public static final String EXPECT = "Expect";
 
     /**
      * Cookies
-     * <br/><br/>
+     * <br><br>
      * Contains stored HTTP cookies previously sent by the server with the Set-Cookie header.
      * <pre>{@code
      * Cookie: <cookie-list>
@@ -600,8 +600,8 @@ public class HttpHeader {
 
     /**
      * Cookies
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Send cookies from the server to the user-agent.
      * <pre>{@code
      * Set-Cookie: <cookie-name>=<cookie-value>
@@ -655,8 +655,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Indicates whether the response can be shared.
      * <pre>{@code
      * Access-Control-Allow-Origin: *
@@ -675,8 +675,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Indicates whether the response to the request can be exposed when the credentials flag is true.
      * <pre>{@code
      * Access-Control-Allow-Credentials: true
@@ -706,8 +706,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.
      * <pre>{@code
      * Access-Control-Allow-Headers: <header-name>[, <header-name>]*
@@ -722,8 +722,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Specifies the methods allowed when accessing the resource in response to a preflight request.
      * <pre>{@code
      * Access-Control-Allow-Methods: <method>, <method>, ...
@@ -739,8 +739,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Indicates which headers can be exposed as part of the response by listing their names.
      * <pre>{@code
      * Access-Control-Expose-Headers: <header-name>, <header-name>, ...
@@ -775,8 +775,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Indicates how long the results of a preflight request can be cached.
      * <pre>{@code
      * Access-Control-Max-Age: <delta-seconds>
@@ -793,8 +793,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Used when issuing a preflight request to let the server know which HTTP headers will be used when the actual request is made.
      * <pre>{@code
      * Access-Control-Request-Headers: <header-name>, <header-name>, ...
@@ -808,8 +808,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Used when issuing a preflight request to let the server know which HTTP method will be used when the actual request is made.
      * <pre>{@code
      * Access-Control-Request-Method: <method>
@@ -823,8 +823,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Indicates where a fetch originates from.
      * <pre>{@code
      * Origin: null
@@ -839,8 +839,8 @@ public class HttpHeader {
 
     /**
      * CORS
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
      * <pre>{@code
      * Timing-Allow-Origin: *
@@ -862,8 +862,8 @@ public class HttpHeader {
 
     /**
      * Do Not Track
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Expresses the user's tracking preference.
      * <pre>{@code
      * DNT: 0
@@ -883,8 +883,8 @@ public class HttpHeader {
 
     /**
      * Do Not Track
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Indicates the tracking status of the corresponding response.
      * <pre>{@code
      * Tk: !  (under construction)
@@ -909,9 +909,9 @@ public class HttpHeader {
 
     /**
      * Downloads
-     * <br/>Response header (for the main body)
-     * <br/>General header (for a subpart of a multipart
-     * <br/><br/>
+     * <br>Response header (for the main body)
+     * <br>General header (for a subpart of a multipart
+     * <br><br>
      * Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a “Save As” dialog.
      * <pre>{@code
      * As a response header for the main body
@@ -962,8 +962,8 @@ public class HttpHeader {
 
     /**
      * Message body information
-     * <br/>Entity header
-     * <br/><br/>
+     * <br>Entity header
+     * <br><br>
      * The size of the resource, in decimal number of bytes.
      * <pre>{@code
      * Content-Length: <length>
@@ -975,8 +975,8 @@ public class HttpHeader {
 
     /**
      * Message body information
-     * <br/>Entity header
-     * <br/><br/>
+     * <br>Entity header
+     * <br><br>
      * Indicates the media type of the resource.
      * <pre>{@code
      * Content-Type: text/html; charset=UTF-8
@@ -1004,8 +1004,8 @@ public class HttpHeader {
 
     /**
      * Message body information
-     * <br/>Entity header
-     * <br/><br/>
+     * <br>Entity header
+     * <br><br>
      * Used to specify the compression algorithm.
      * <pre>{@code
      * Content-Encoding: gzip
@@ -1042,8 +1042,8 @@ public class HttpHeader {
 
     /**
      * Message body information
-     * <br/>Entity header
-     * <br/><br/>
+     * <br>Entity header
+     * <br><br>
      * Describes the human language(s) intended for the audience, so that it allows a user to differentiate according to the users' own preferred language.
      * <pre>{@code
      * Content-Language: de-DE
@@ -1079,8 +1079,8 @@ public class HttpHeader {
 
     /**
      * Message body information
-     * <br/>Entity header
-     * <br/><br/>
+     * <br>Entity header
+     * <br><br>
      * Indicates an alternate location for the returned data.
      * <pre>{@code
      * Content-Location: <url>
@@ -1096,8 +1096,8 @@ public class HttpHeader {
 
     /**
      * Proxies
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Contains information from the client-facing side of proxy servers that is altered or lost when a proxy is involved in the path of the request.
      * <pre>{@code
      * Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
@@ -1130,8 +1130,8 @@ public class HttpHeader {
 
     /**
      * Proxies
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Identifies the originating IP addresses of a client connecting to a web server through an HTTP proxy or a load balancer.
      * <pre>{@code
      * X-Forwarded-For: <client>, <proxy1>, <proxy2>
@@ -1152,8 +1152,8 @@ public class HttpHeader {
 
     /**
      * Proxies
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Identifies the original host requested that a client used to connect to your proxy or load balancer.
      * <pre>{@code
      * X-Forwarded-Host: <host>
@@ -1167,8 +1167,8 @@ public class HttpHeader {
 
     /**
      * Proxies
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Identifies the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.
      * <pre>{@code
      * X-Forwarded-Proto: <protocol>
@@ -1191,8 +1191,8 @@ public class HttpHeader {
 
     /**
      * Proxies
-     * <br/>General header
-     * <br/><br/>
+     * <br>General header
+     * <br><br>
      * Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers.
      * <pre>{@code
      * Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
@@ -1210,8 +1210,8 @@ public class HttpHeader {
 
     /**
      * Redirects
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Indicates the URL to redirect a page to.
      * <pre>{@code
      * Location: <url>
@@ -1225,8 +1225,8 @@ public class HttpHeader {
 
     /**
      * Request context
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Contains an Internet email address for a human user who controls the requesting user agent.
      * <pre>{@code
      * From: <email>
@@ -1240,8 +1240,8 @@ public class HttpHeader {
 
     /**
      * Request context
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Specifies the domain name of the server (for virtual hosting), and (optionally) the TCP port number on which the server is listening.
      * <pre>{@code
      * Host: <host>:<port>
@@ -1255,8 +1255,8 @@ public class HttpHeader {
 
     /**
      * Request context
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * The address of the previous web page from which a link to the currently requested page was followed.
      * <pre>{@code
      * Referer: <url>
@@ -1270,8 +1270,8 @@ public class HttpHeader {
 
     /**
      * Request context
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Governs which referrer information sent in the Referer header should be included with requests made.
      * <pre>{@code
      * Referrer-Policy: no-referrer
@@ -1290,8 +1290,8 @@ public class HttpHeader {
 
     /**
      * Request context
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent.
      *
      * <pre>{@code
@@ -1312,8 +1312,8 @@ public class HttpHeader {
 
     /**
      * Response context
-     * <br/>Entity header
-     * <br/><br/>
+     * <br>Entity header
+     * <br><br>
      * Lists the set of HTTP request methods supported by a resource.
      * <pre>{@code
      * Allow: <http-methods>
@@ -1327,8 +1327,8 @@ public class HttpHeader {
 
     /**
      * Response context
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Contains information about the software used by the origin server to handle the request.
      * <pre>{@code
      * Server: <product>
@@ -1342,8 +1342,8 @@ public class HttpHeader {
 
     /**
      * Range requests
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Indicates if the server supports range requests, and if so in which unit the range can be expressed.
      * <pre>{@code
      * Accept-Ranges: <range-unit>
@@ -1358,8 +1358,8 @@ public class HttpHeader {
 
     /**
      * Range requests
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Indicates the part of a document that the server should return.
      * <pre>{@code
      * Range: <unit>=<range-start>-
@@ -1385,8 +1385,8 @@ public class HttpHeader {
 
     /**
      * Range requests
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Creates a conditional range request that is only fulfilled if the given etag or date matches the remote resource. Used to prevent downloading two ranges from incompatible version of the resource.
      * <pre>{@code
      * If-Range: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
@@ -1403,8 +1403,8 @@ public class HttpHeader {
 
     /**
      * Range requests
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Indicates where in a full body message a partial message belongs.
      * <pre>{@code
      * Content-Range: <unit> <range-start>-<range-end>/<size>
@@ -1420,22 +1420,22 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/><br/>
+     * <br><br>
      * Allows a server to declare an embedder policy for a given document.
      */
     public static final String CROSS_ORIGIN_EMBEDDER_POLICY = "Cross-Origin-Embedder-Policy";
 
     /**
      * Security
-     * <br/><br/>
+     * <br><br>
      * Prevents other domains from opening/controlling a window.
      */
     public static final String CROSS_ORIGIN_OPENER_POLICY = "Cross-Origin-Opener-Policy";
 
     /**
      * Security
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Prevents other domains from reading the response of the resources to which this header is applied.
      * <pre>{@code
      * Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
@@ -1453,8 +1453,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Controls resources the user agent is allowed to load for a given page.
      * <pre>{@code
      * Content-Security-Policy: <policy-directive>; <policy-directive>
@@ -1478,8 +1478,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of JSON documents sent via an HTTP POST request to the specified URI.
      * <pre>{@code
      * Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
@@ -1500,8 +1500,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
      * <pre>{@code
      * Expect-CT: report-uri="<uri>",
@@ -1519,8 +1519,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.
      * <pre>{@code
      * Feature-Policy: <directive> <allowlist>
@@ -1544,8 +1544,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Force communication using HTTPS instead of HTTP.
      * <pre>{@code
      * Strict-Transport-Security: max-age=<expire-time>
@@ -1579,8 +1579,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the upgrade-insecure-requests directive.
      * <pre>{@code
      * Upgrade-Insecure-Requests: 1
@@ -1606,8 +1606,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Disables MIME sniffing and forces browser to use the type given in Content-Type.
      * <pre>{@code
      * X-Content-Type-Options: nosniff
@@ -1618,14 +1618,14 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/><br/>
+     * <br><br>
      * The X-Download-Options HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related MS Edge bug).
      */
     public static final String X_DOWNLOAD_OPTIONS = "X-Download-Options";
 
     /**
      * Security
-     * <br/>Response header
+     * <br>Response header
      * <pre>{@code
      * Indicates whether a browser should be allowed to render
      * a page in a <frame>, <iframe>, <embed> or <object>.
@@ -1641,22 +1641,22 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/><br/>
+     * <br><br>
      * Specifies if a cross-domain policy file (crossdomain.xml) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player, Adobe Acrobat, Microsoft Silverlight, or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the Same-Origin Policy. See the Cross-domain Policy File Specification for more information.
      */
     public static final String X_PERMITTED_CROSS_DOMAIN_POLICIES = "X-Permitted-Cross-Domain-Policies";
 
     /**
      * Security
-     * <br/><br/>
+     * <br><br>
      * May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
      */
     public static final String X_POWERED_BY = "X-Powered-By";
 
     /**
      * Security
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Enables cross-site scripting filtering.
      * <pre>{@code
      * X-XSS-Protection: 0
@@ -1692,8 +1692,8 @@ public class HttpHeader {
 
     /**
      * @deprecated Security
-     * <br/>HTTP Public Key Pinning (HPKP)
-     * <br/><br/>
+     * <br>HTTP Public Key Pinning (HPKP)
+     * <br><br>
      * Associates a specific cryptographic public key with a certain web server to decrease the risk of MITM attacks with forged certificates.
      * <pre>{@code
      * Public-Key-Pins: pin-sha256="<pin-value>";
@@ -1715,9 +1715,9 @@ public class HttpHeader {
 
     /**
      * @deprecated Security
-     * <br/>HTTP Public Key Pinning (HPKP)
-     * <br/>Response header
-     * <br/><br/>
+     * <br>HTTP Public Key Pinning (HPKP)
+     * <br>Response header
+     * <br><br>
      * Sends reports to the report-uri specified in the header and does still allow clients to connect to the server even if the pinning is violated.
      * <pre>{@code
      * Public-Key-Pins-Report-Only: pin-sha256="<pin-value>";
@@ -1737,8 +1737,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Fetch metadata request headers
-     * <br/><br/>
+     * <br>Fetch metadata request headers
+     * <br><br>
      * It is a request header that indicates the relationship between a request initiator's origin and its target's origin. It is a Structured Header whose value is a token with possible values cross-site, same-origin, same-site, and none.
      * <pre>{@code
      * Sec-Fetch-Site: cross-site
@@ -1753,8 +1753,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Fetch metadata request headers
-     * <br/><br/>
+     * <br>Fetch metadata request headers
+     * <br><br>
      * It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values cors, navigate, nested-navigate, no-cors, same-origin, and websocket.
      * <pre>{@code
      * Sec-Fetch-Mode: cors
@@ -1769,8 +1769,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Fetch metadata request headers
-     * <br/><br/>
+     * <br>Fetch metadata request headers
+     * <br><br>
      * It is a request header that indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are ?0 for false and ?1 for true.
      * <pre>{@code
      * Sec-Fetch-User: ?0
@@ -1781,8 +1781,8 @@ public class HttpHeader {
 
     /**
      * Security
-     * <br/>Fetch metadata request headers
-     * <br/><br/>
+     * <br>Fetch metadata request headers
+     * <br><br>
      * It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values audio, audioworklet, document, embed, empty, font, image, manifest, object, paintworklet, report, script, serviceworker, sharedworker, style, track, video, worker, xslt, and nested-document.
      * <pre>{@code
      * Sec-Fetch-Dest: audio
@@ -1818,8 +1818,8 @@ public class HttpHeader {
 
     /**
      * Server-sent events
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Defines a mechanism that enables developers to declare a network error reporting policy.
      * <pre>{@code
      * NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
@@ -1841,15 +1841,15 @@ public class HttpHeader {
 
     /**
      * Server-sent events
-     * <br/><br/>
+     * <br><br>
      * Used to specify a server endpoint for the browser to send warning and error reports to.
      */
     public static final String REPORT_TO = "Report-To";
 
     /**
      * Transfer coding
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Specifies the form of encoding used to safely transfer the entity to the user.
      * <pre>{@code
      * Transfer-Encoding: chunked
@@ -1883,8 +1883,8 @@ public class HttpHeader {
 
     /**
      * Transfer Encoding
-     * <br/>Request header
-     * <br/><br/>
+     * <br>Request header
+     * <br><br>
      * Specifies the transfer encodings the user agent is willing to accept.
      * <pre>{@code
      *  TE: compress
@@ -1900,8 +1900,8 @@ public class HttpHeader {
 
     /**
      * Transfer Encoding
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Allows the sender to include additional fields at the end of chunked message.
      * <pre>{@code
      * Trailer: header-names
@@ -1971,7 +1971,7 @@ public class HttpHeader {
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * Used to list alternate ways to reach this service.
      * <pre>{@code
      * Alt-Svc: clear
@@ -1990,7 +1990,7 @@ public class HttpHeader {
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * Contains the date and time at which the message was originated.
      * <pre>{@code
      * Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
@@ -2004,8 +2004,8 @@ public class HttpHeader {
 
     /**
      * Other
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Tells the browser that the page being loaded is going to want to perform a large allocation.
      * <pre>{@code
      * Large-Allocation: 0
@@ -2026,7 +2026,7 @@ public class HttpHeader {
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * The Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.
      * <pre>{@code
      * Link: < uri-reference >; param1=value1; param2="value2"
@@ -2042,50 +2042,50 @@ public class HttpHeader {
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * A Push-Policy defines the server behaviour regarding push when processing a request.
      */
     public static final String PUSH_POLICY = "Push-Policy";
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * Indicates how long the user agent should wait before making a follow-up request.
      */
     public static final String RETRY_AFTER = "Retry-After";
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * The Signature header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
      */
     public static final String SIGNATURE = "Signature";
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * The Signed-Headers header field identifies an ordered list of response header fields to include in a signature.
      */
     public static final String SIGNED_HEADERS = "Signed-Headers";
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * Communicates one or more metrics and descriptions for the given request-response cycle.
      */
     public static final String SERVER_TIMING = "Server-Timing";
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * Used to remove the path restriction by including this header in the response of the Service Worker script.
      */
     public static final String SERVICE_WORKER_ALLOWED = "Service-Worker-Allowed";
 
     /**
      * Other
-     * <br/>Response header
-     * <br/><br/>
+     * <br>Response header
+     * <br><br>
      * Links generated code to a source map.
      * <pre>{@code
      * SourceMap: <url>
@@ -2100,14 +2100,14 @@ public class HttpHeader {
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * The relevant RFC document for the Upgrade header field is RFC 7230, section 6.7. The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field please see section 6.1 of the aforementioned RFC.
      */
     public static final String UPGRADE = "Upgrade";
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
      */
     public static final String X_DNS_PREFETCH_CONTROL = "X-DNS-Prefetch-Control";
@@ -2132,14 +2132,14 @@ public class HttpHeader {
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * The X-Robots-Tag HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to <meta name="robots" content="...">.
      */
     public static final String X_ROBOTS_TAG = "X-Robots-Tag";
 
     /**
      * Other
-     * <br/><br/>
+     * <br><br>
      * Used by Internet Explorer to signal which document mode to use.
      */
     public static final String X_UA_COMPATIBLE = "X-UA-Compatible";

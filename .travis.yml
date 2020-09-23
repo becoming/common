@@ -8,8 +8,8 @@ branches:
   - master
 script:
 - git checkout master
-- mvn --batch-mode -s .travis/settings.xml
-- mvn --batch-mode -s .travis/settings.xml
+- mvn --batch-mode -s .travis/settings.xml release:prepare
+- mvn --batch-mode -s .travis/settings.xml release:perform
 env:
   global:
   - secure: t0zRnSgMmIs1wqOr6GhTrGjqWnZJNOEZEHbVJdrklqBcMZe16Mzanu0fs/FAKJNdRvPuFKG/cw22PLoZL7GJVLeSjuOUXvzLnFJmOYGerjGCSDfONwbqAAgac2lSyuKSVXR11ZsTyikxs4Y47YCIC21BtyyCnOG4drQzyYSBtsOVkj9D2VQYRHS7gnrE9QqCZ/JqLFlEoxarTBjvQw0ioVWPj3D9sLqbkRrRYb15ZyCRguKwtuh7ENtgpSwFAbz5zWRZcjz6SZh7Etv8de2MoyOex0c8Y/Qk5nt5ngu7HYHT88Zk0wZx9GTNSYGtrskz+N+JUwWY/+TXxonNwGUsIeKgGog0/imLgyUPLjE3o8XaRNVm0dWgTgn+nrQHnPdOBuQTjnSAal1aVPpyanI3jf0huoYsjBEo3Nxs4FhcS9GKBbZtLdhvvfBPT0NcINw1twq1Di2ODwnWk25nv3HNfpIzdX3Rbw8aO0AQn5k/xBwZzDVox0CJqkEk/C4kGUvLc78JjkJ0UxEaG+5OWPYTzOGosk7/yAkvW+QBjfhHg+cuQR541aZKzITac8rsc7sSFZclYqCAz5rsgyq2eaZRR/aqixPbWxlU0f7E1e5hoQVP2g78vxRwhZBhGpuJUWkJoi/90id6uW2CmZSZD6+/usvDW0FLsYz5ysFaSsO6qY0=

@@ -1,6 +1,7 @@
 package lu.smarthome.common.exceptions;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class AbstractRuntimeException extends RuntimeException {
@@ -19,4 +20,12 @@ public abstract class AbstractRuntimeException extends RuntimeException {
 
     public abstract int getHttpCode();
 
+    @Override
+    public String toString() {
+        var msgs = details.stream().map(ExceptionDetail::getMessage).toArray();
+
+        return "{" +
+                "details: " + Arrays.toString(msgs)
+                + '}';
+    }
 }

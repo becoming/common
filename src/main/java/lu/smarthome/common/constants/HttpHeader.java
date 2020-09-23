@@ -157,7 +157,7 @@ public class HttpHeader {
      * <br>Response header
      * <br>HTML5
      * <br><br>
-     * Servers can advertise support for Client Hints using the Accept-CH header field or an equivalent HTML <meta> element with http-equiv attribute
+     * Servers can advertise support for Client Hints using the Accept-CH header field or an equivalent HTML &lt;metq&gt; element with http-equiv attribute
      * <pre>{@code
      * Accept-CH: <list of client hints>
      *
@@ -283,7 +283,7 @@ public class HttpHeader {
      * <br><br>
      * The last modification date of the resource, used to compare several versions of the same resource. It is less accurate than ETag, but easier to calculate in some environments. Conditional requests using If-Modified-Since and If-Unmodified-Since use this value to change the behavior of the request.
      * <pre>{@code
-     * Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+     * Last-Modified: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
      *
      * <month> One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).
      *
@@ -1057,13 +1057,13 @@ public class HttpHeader {
      * to indicate the language of an entire HTML document
      * or parts of it.
      *
-     * <html lang="de">
+     * &lt;html lang="de"&gt;
      *
      * Do not use this meta element like this
      * for stating a document language:
      *
      * <!-- /!\ This is bad practice -->
-     * <meta http-equiv="content-language" content="de">
+     * &lt;meta http-equiv="content-language" content="de"&gt;
      *
      * Indicating a target audience for a resource
      *
@@ -1465,7 +1465,7 @@ public class HttpHeader {
      * Content-Security-Policy: default-src https:
      *
      * // meta tag
-     * <meta http-equiv="Content-Security-Policy" content="default-src https:">
+     * &lt;meta http-equiv="Content-Security-Policy" content="default-src https:"&gt;
      *
      * Example: Pre-existing site that uses too much inline code to fix but wants to ensure resources are loaded only over https and disable plugins:
      *
@@ -2027,7 +2027,7 @@ public class HttpHeader {
     /**
      * Other
      * <br><br>
-     * The Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.
+     * The Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML &lt;link&gt; element.
      * <pre>{@code
      * Link: < uri-reference >; param1=value1; param2="value2"
      *
@@ -2133,7 +2133,7 @@ public class HttpHeader {
     /**
      * Other
      * <br><br>
-     * The X-Robots-Tag HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to <meta name="robots" content="...">.
+     * The X-Robots-Tag HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to &lt;meta name="robots" content="..."&gt;.
      */
     public static final String X_ROBOTS_TAG = "X-Robots-Tag";
 

@@ -1,10 +1,13 @@
 package tech.becoming.common.exceptions;
 
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 import static tech.becoming.common.constants.HttpStatusCode.NOT_FOUND_404;
 import static tech.becoming.common.constants.HttpStatusName.NOT_FOUND;
 
+@NoArgsConstructor
 public class NotFoundException extends AbstractRuntimeException {
 
     public NotFoundException(List<ExceptionDetail> details) {

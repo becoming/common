@@ -1,9 +1,12 @@
 package tech.becoming.common.exceptions;
 
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@NoArgsConstructor
 public abstract class AbstractRuntimeException extends RuntimeException {
 
     private List<ExceptionDetail> details = new ArrayList<>();

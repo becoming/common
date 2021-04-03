@@ -2,17 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>lu.smarthome</groupId>
+	<groupId>tech.becoming</groupId>
 	<artifactId>common</artifactId>
-	<version>0.0.12-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>common</name>
 
 	<properties>
 		<project.scm.id>github</project.scm.id>
-		<java.version>11</java.version>
+		<maven.compiler.target>1.11</maven.compiler.target>
+		<maven.compiler.source>1.11</maven.compiler.source>
+		<maven.compiler.release>11</maven.compiler.release>
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sonar.projectKey>smart-home-oss_common</sonar.projectKey>
-		<sonar.organization>smart-home-oss</sonar.organization>
+		<sonar.projectKey>becoming-tech_common</sonar.projectKey>
+		<sonar.organization>becoming-tech</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
 		<lombok.version>1.18.12</lombok.version>
@@ -20,16 +23,16 @@
 
 	<distributionManagement>
 		<repository>
-			<id>bintray-smart-home-oss-maven</id>
-			<name>smart-home-oss-maven</name>
-			<url>https://api.bintray.com/maven/smart-home-oss/maven/common/;publish=1</url>
+			<id>bintray-becoming-tech-maven</id>
+			<name>becoming-tech-maven</name>
+			<url>https://api.bintray.com/maven/becoming/maven/common/;publish=1</url>
 		</repository>
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:https://github.com/smart-home-oss/common.git</connection>
-		<url>hhttps://github.com/smart-home-oss/common</url>
-		<developerConnection>scm:git:https://github.com/smart-home-oss/common.git</developerConnection>
+		<connection>scm:git:https://github.com/becoming/common.git</connection>
+		<url>hhttps://github.com/becoming/common</url>
+		<developerConnection>scm:git:https://github.com/becoming/common.git</developerConnection>
 		<tag>common-0.0.2</tag>
 	</scm>
 
@@ -41,20 +44,4 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<release>11</release>
-					<source>11</source>
-					<target>11</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
 </project>

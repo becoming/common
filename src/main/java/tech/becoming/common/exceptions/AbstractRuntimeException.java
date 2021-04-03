@@ -1,17 +1,13 @@
 package tech.becoming.common.exceptions;
 
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @NoArgsConstructor
-@Slf4j
 public abstract class AbstractRuntimeException extends RuntimeException {
 
     public static final Logger LOGGER = Logger.getLogger(AbstractRuntimeException.class.getName());

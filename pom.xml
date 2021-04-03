@@ -23,9 +23,9 @@
 
 	<distributionManagement>
 		<repository>
-			<id>bintray-becoming-tech-maven</id>
-			<name>becoming-tech-maven</name>
-			<url>https://api.bintray.com/maven/becoming/maven/common/;publish=1</url>
+			<id>github</id>
+			<name>Becoming Apache Maven Packages on GitHub</name>
+			<url>https://maven.pkg.github.com/becoming/common</url>
 		</repository>
 	</distributionManagement>
 

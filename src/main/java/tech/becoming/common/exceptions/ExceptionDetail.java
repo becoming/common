@@ -17,6 +17,14 @@ public class ExceptionDetail {
     @Getter(AccessLevel.NONE)
     private Throwable throwable;
 
+    public static ExceptionDetail ofNameAndMessage(String name, String message) {
+        return ExceptionDetail
+                .builder()
+                .name(name)
+                .message(message)
+                .build();
+    }
+
     public String getThrowableMessage() {
         return getMessage(throwable, new StringBuilder())
                 .delete(0, 2) // delete last space and semi column

@@ -1,9 +1,9 @@
-package lu.smarthome.common.exceptions;
+package tech.becoming.common.exceptions;
 
 import java.util.List;
 
-import static lu.smarthome.common.constants.HttpStatusCode.BAD_REQUEST_400;
-import static lu.smarthome.common.constants.HttpStatusName.BAD_REQUEST;
+import static tech.becoming.common.constants.HttpStatusCode.BAD_REQUEST_400;
+import static tech.becoming.common.constants.HttpStatusName.BAD_REQUEST;
 
 public class BadRequestException extends AbstractRuntimeException {
 

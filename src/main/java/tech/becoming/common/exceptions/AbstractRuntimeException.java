@@ -1,4 +1,4 @@
-package lu.smarthome.common.exceptions;
+package tech.becoming.common.exceptions;
 
 import java.util.ArrayList;
 import java.util.Arrays;

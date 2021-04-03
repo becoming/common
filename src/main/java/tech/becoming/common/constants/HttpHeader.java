@@ -1,4 +1,4 @@
-package lu.smarthome.common.constants;
+package tech.becoming.common.constants;
 
 /**
  * Headers can be grouped according to their contexts:

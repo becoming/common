@@ -1,4 +1,4 @@
-package lu.smarthome.common.enums;
+package tech.becoming.common.enums;
 
 public enum TimesOfDay {
     EARLY_MORNING, MORNING,

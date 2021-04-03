@@ -1,9 +1,9 @@
-package lu.smarthome.common.exceptions;
+package tech.becoming.common.exceptions;
 
 import java.util.List;
 
-import static lu.smarthome.common.constants.HttpStatusCode.NOT_FOUND_404;
-import static lu.smarthome.common.constants.HttpStatusName.NOT_FOUND;
+import static tech.becoming.common.constants.HttpStatusCode.NOT_FOUND_404;
+import static tech.becoming.common.constants.HttpStatusName.NOT_FOUND;
 
 public class NotFoundException extends AbstractRuntimeException {
 

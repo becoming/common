@@ -1,9 +1,9 @@
-package lu.smarthome.common.exceptions;
+package tech.becoming.common.exceptions;
 
 import java.util.List;
 
-import static lu.smarthome.common.constants.HttpStatusCode.UNAUTHORIZED_401;
-import static lu.smarthome.common.constants.HttpStatusName.UNAUTHORIZED;
+import static tech.becoming.common.constants.HttpStatusCode.UNAUTHORIZED_401;
+import static tech.becoming.common.constants.HttpStatusName.UNAUTHORIZED;
 
 public class UnauthenticatedException extends AbstractRuntimeException {
 

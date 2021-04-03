@@ -1,9 +1,9 @@
-package lu.smarthome.common.exceptions;
+package tech.becoming.common.exceptions;
 
 import java.util.List;
 
-import static lu.smarthome.common.constants.HttpStatusCode.INTERNAL_SERVER_ERROR_500;
-import static lu.smarthome.common.constants.HttpStatusName.NOT_IMPLEMENTED;
+import static tech.becoming.common.constants.HttpStatusCode.INTERNAL_SERVER_ERROR_500;
+import static tech.becoming.common.constants.HttpStatusName.NOT_IMPLEMENTED;
 
 public class NotImplementedException extends AbstractRuntimeException {
 

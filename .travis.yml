@@ -7,7 +7,7 @@ branches:
   only:
   - master
 script:
-- git checkout master
+- git checkout main
 - mvn --batch-mode -s .travis/settings.xml release:prepare
 - mvn --batch-mode -s .travis/settings.xml release:perform
 env:

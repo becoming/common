@@ -32,15 +32,8 @@ In order to use the library you have to add the repositories tag to your `pom.xm
 ```xml
 <repositories>
     <repository>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <id>bintray-becoming-tech-maven</id>
-        <name>bintray</name>
-        <url>https://dl.bintray.com/becoming-tech/maven</url>
+        <id>github</id>
+        <url>https://maven.pkg.github.com/becoming/*</url>
     </repository>
 </repositories>
 ```
@@ -51,7 +44,6 @@ And the dependenccy itself
 <dependency>
     <groupId>tech.becoming</groupId>
     <artifactId>common</artifactId>
-    <version>0.0.1</version>
-    <type>pom</type>
+    <version>1.0.2</version>
 </dependency>
 ```

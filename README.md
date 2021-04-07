@@ -25,7 +25,7 @@ Exceptions :
 - UnauthenticatedException
 - UnauthorizedException
 
-Repository page : https://bintray.com/beta/#/becoming-tech/maven/common?tab=overview
+Repository page : https://github.com/becoming/common/packages/708107
 
 In order to use the library you have to add the repositories tag to your `pom.xml` or `settings.xml`
 

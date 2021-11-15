@@ -48,9 +48,9 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:https://github.com/becoming/common.git</connection>
+		<connection>scm:git:ssh://git@github.com:becoming/common.git</connection>
 		<url>https://github.com/becoming/common</url>
-		<developerConnection>scm:git:https://github.com/becoming/common.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com:becoming/common.git</developerConnection>
 		<tag>common-1.0.4</tag>
 	</scm>
 

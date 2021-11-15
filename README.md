@@ -25,21 +25,6 @@ Exceptions :
 - UnauthenticatedException
 - UnauthorizedException
 
-Repository page : https://github.com/becoming/common/packages/708107
-
-In order to use the library you have to add the repositories tag to your `pom.xml` or `settings.xml`
-
-```xml
-<repositories>
-    <repository>
-        <id>github</id>
-        <url>https://maven.pkg.github.com/becoming/*</url>
-    </repository>
-</repositories>
-```
-    
-And the dependenccy itself
-
 ```xml
 <dependency>
     <groupId>tech.becoming</groupId>

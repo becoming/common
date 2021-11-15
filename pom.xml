@@ -101,6 +101,11 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<source>${maven.compiler.target}</source>
+<!--					makes the warning with modules go away, but does not link with official docs :-( -->
+					<detectJavaApiLink>false</detectJavaApiLink>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -115,6 +120,10 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<keyname>${gpg.keyname}</keyname>
+					<passphrase>${gpg.passphrase}</passphrase>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -29,6 +29,6 @@ Exceptions :
 <dependency>
     <groupId>tech.becoming</groupId>
     <artifactId>common</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.6</version>
 </dependency>
 ```

@@ -4,7 +4,7 @@
 
 	<groupId>tech.becoming</groupId>
 	<artifactId>common</artifactId>
-	<version>1.0.4-SNAPSHOT</version>
+	<version>1.0.6-SNAPSHOT</version>
 	<name>Becoming.tech's common library</name>
 	<description>Yet another library that contains the regular comonly used things like http status codes, exceptions, enums. No dependencies in the final code.</description>
 	<url>https://github.com/becoming/common</url>

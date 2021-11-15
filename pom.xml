@@ -17,6 +17,15 @@
 		</license>
 	</licenses>
 
+	<developers>
+		<developer>
+			<name>Rodislav Moldovan</name>
+			<email>rodislav@becoming.tech</email>
+			<organization>Becoming.tech</organization>
+			<organizationUrl>https://becoming.tech</organizationUrl>
+		</developer>
+	</developers>
+
 	<properties>
 		<project.scm.id>github</project.scm.id>
 		<maven.compiler.target>11</maven.compiler.target>

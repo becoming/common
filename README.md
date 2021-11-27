@@ -9,6 +9,10 @@ Constants :
 - HttpHeader
 - HttpStatusCode
 - HttpStatusName
+- DateTime
+  - "dd-MM-yyyy HH:mm:ss"
+  - "dd-MM-yyyy"
+  - UTC
 
 Enums : 
 - Days

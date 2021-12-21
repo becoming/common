@@ -7,6 +7,7 @@ Contains a list of commonly used constants and exceptions.
 
 Constants :
 - HttpHeader
+- HttpMethod
 - HttpStatusCode
 - HttpStatusName
 - DateTime

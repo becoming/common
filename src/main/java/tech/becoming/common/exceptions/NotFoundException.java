@@ -28,4 +28,17 @@ public class NotFoundException extends AbstractRuntimeException {
     public static <T> T throwIfEmpty(Optional<T> optional) {
         return optional.orElseThrow(NotFoundException::new);
     }
+
+    /**
+     * Can be used in conjuncture with Vavr and Spring Data's <b>exist</b> or <b>existById</b>
+     * @param b boolean that needs to be checked in <b>exists</b> cases
+     * @return true or throw a NotFoundException
+     */
+    public static Boolean throwIfFalse(Boolean b) {
+        if(b) {
+            return true;
+        }
+
+        throw new NotFoundException();
+    }
 }

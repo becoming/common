@@ -22,6 +22,9 @@ Enums :
 - Periodicity
 - TimesOfDay
 
+Http exception body :
+- HttpExceptionBody, useful when creating custom `@ExceptionHandler` with Spring. 
+
 Exceptions :
 - AbstractRuntimeException
 - BadRequestException

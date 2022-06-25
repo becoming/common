@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/becoming-tech/common.svg?branch=master)](https://travis-ci.com/becoming-tech/common)
-[ ![Download](https://api.bintray.com/packages/becoming-tech/maven/common/images/download.svg) ](https://bintray.com/becoming-tech/maven/common/_latestVersion)
 # common
 Contains a list of commonly used constants and exceptions.
 
